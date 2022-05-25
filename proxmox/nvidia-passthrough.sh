@@ -78,8 +78,8 @@ ls -l /dev/nv*
 lxc.cgroup2.devices.allow = c 195:0 rw
 lxc.cgroup2.devices.allow = c 195:255 rw
 lxc.cgroup2.devices.allow = c 195:254 rw
-lxc.cgroup2.devices.allow = c 509:0 rw
-lxc.cgroup2.devices.allow = c 509:1 rw
+lxc.cgroup2.devices.allow = c 510:0 rw
+lxc.cgroup2.devices.allow = c 510:1 rw
 lxc.cgroup2.devices.allow = c 10:144 rw
 
 # Pass through device files
