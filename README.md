@@ -1,6 +1,6 @@
 # linux
 collection of scripts for linux
-```
+
 #### Tail the syslog
 
 ```sh
