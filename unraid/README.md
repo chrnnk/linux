@@ -65,9 +65,7 @@ Available commands: start stop
 
 Available commands: reboot poweroff shutdown
 
-Note
-
-poweroff If you get an unclean shutdown when issuing this command you need to adjust your timeout settings, see https://forums.unraid.net/topic/69868-dealing-with-unclean-shutdowns
+Note - If you get an unclean shutdown when running "poweroff" you need to adjust your timeout settings, see https://forums.unraid.net/topic/69868-dealing-with-unclean-shutdowns
 
 ### Run diagnostics
 
