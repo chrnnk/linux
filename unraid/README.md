@@ -11,11 +11,11 @@ docker <command> <containername>
 
 Available commands: start stop restart pause logs
 
-## Print all container names:
+### Print all container names:
 
 docker ps --format ‘{{.Names}}’
 
-## Print all container images:
+### Print all container images:
 
 docker ps --format ‘{{.Image}}’
 
