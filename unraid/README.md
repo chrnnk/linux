@@ -1,4 +1,4 @@
-# Nice to know Unraid commands
+# Unraid commands
 ## Docker service
 
 ```sh
