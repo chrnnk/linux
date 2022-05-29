@@ -1,13 +1,13 @@
 # Nice to know Unraid commands
 ## Docker service
 
-/etc/rc.d/rc.docker <command>
+/etc/rc.d/rc.docker [command]
 
 Available commands: start stop restart status
 
 ## Docker containers
 
-docker <command> <containername>
+docker [command] [containername]
 
 Available commands: start stop restart pause logs
 
@@ -21,19 +21,19 @@ docker ps --format ‘{{.Image}}’
 
 ## Nginx
 
-/etc/rc.d/rc.nginx <command>
+/etc/rc.d/rc.nginx [command]
 
 Available commands: start stop restart status
 
 ## PHP
 
-/etc/rc.d/rc.php-fpm <command>
+/etc/rc.d/rc.php-fpm [command]
 
 Available commands: start stop restart status
 
 ## VM Service
 
-/etc/rc.d/rc.libvirt <command>
+/etc/rc.d/rc.libvirt [command]
 
 Available commands: start stop
 
@@ -43,18 +43,18 @@ virsh list --all
 
 Domains
 
-virsh <command> <domain>
+virsh [command] [domain]
 
 Available commands: start shutdown reboot suspend
 Samba
 
-/etc/rd.d/rc.samba <command>
+/etc/rd.d/rc.samba [command]
 
 Available commands: start stop
 Unraid
 Shutdown/Reboot
 
-/sbin/<command>
+/sbin/[command]
 
 Available commands: reboot poweroff shutdown
 
