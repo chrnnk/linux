@@ -1,38 +1,37 @@
 # Nice to know Unraid commands
 ## Docker service
-### Third
 
 /etc/rc.d/rc.docker <command>
 
 Available commands: start stop restart status
 
-### Docker containers
+## Docker containers
 
 docker <command> <containername>
 
 Available commands: start stop restart pause logs
 
-### Print all container names:
+## Print all container names:
 
 docker ps --format ‘{{.Names}}’
 
-### Print all container images:
+## Print all container images:
 
 docker ps --format ‘{{.Image}}’
 
-### Nginx
+## Nginx
 
 /etc/rc.d/rc.nginx <command>
 
 Available commands: start stop restart status
 
-### PHP
+## PHP
 
 /etc/rc.d/rc.php-fpm <command>
 
 Available commands: start stop restart status
 
-### VM Service
+## VM Service
 
 /etc/rc.d/rc.libvirt <command>
 
