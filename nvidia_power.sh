@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/SpaceinvaderOne/nvidia_powersave
 # check for driver
 command -v nvidia-smi &> /dev/null || { echo >&2 "nvidia driver is not installed you will need to install this from community applications ... exiting."; exit 1; }
 echo "Nvidia drivers are installed"
