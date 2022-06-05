@@ -4,7 +4,7 @@ qm set 104 -sata4 /dev/disk/by-id/ata-ST8000VN0022-2EL112_ZA1JP8Y2
 qm set 104 -sata3 /dev/disk/by-id/ata-ST8000VN0022-2EL112_ZA1JPRT5
 qm set 104 -sata2 /dev/disk/by-id/ata-ST8000VN004-2M2101_WKD2HM6K
 qm set 104 -sata1 /dev/disk/by-id/ata-ST8000VN004-2M2101_WSD1V6DN
-# qm set 101 -sata6 /dev/disk/by-id/nvme-nvme-Samsung_SSD_950_PRO_512GB_S2GMNX0H508523P
+# qm set 104 -scsi2 /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMNX0H508523P
 qm set 104 -scsi1 /dev/disk/by-id/ata-ST14000NM000J-2TX103_ZR900KK6
 qm set 104 -scsi2 /dev/disk/by-id/ata-ST14000NM000J-2TX103_ZR900KRS
 qm set 104 -scsi3 /dev/disk/by-id/ata-ST14000NM000J-2TX103_ZR900LPN
