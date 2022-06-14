@@ -6,7 +6,7 @@ uname -r
 Install headers
 
 apt-cache search pve-header
-apt install pve-headers-*.*.*-*-pve
+apt install pve-headers-$(uname -r)
 
 Blacklist Nouveau
 
@@ -24,7 +24,7 @@ apt install build-essential
 
 Download Drivers
 
-wget (YOURDRIVERS)
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.48.07.run
 
 Nvidia driver site: https://www.nvidia.com/Download/index...
 Make driver file executable
@@ -45,6 +45,8 @@ Add these lines
 nvidia
 nvidia-modeset
 nvidia_uvm
+
+echo -e '\n# load nvidia modules\nnvidia-drm\nnvidia-uvm' >> /etc/modules-load.d/modules.conf
 
 Update initramfs
 
