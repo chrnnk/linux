@@ -46,8 +46,12 @@ update-initramfs -u
 # reboot
 # check that the drivers are running
 nvidia-smi
+# check persistence service
+systemctl status nvidia-persistenced.service
+# check files
+ls -alh /dev/nvidia*
 # edit the conf container you want to passthrough too
-nano /etc/pve/lxc/(YOURCONTAINERID).conf
+nano /etc/pve/lxc/102.conf
 # add these lines but make sure the path (numbers) are correct
 ls -l /dev/nv*
 # allow cgroup access
