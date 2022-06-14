@@ -3,82 +3,83 @@ Check to see what kernel version you are running
 
 uname -r
 
-Install headers
+# Install headers
 
 apt-cache search pve-header
 apt install pve-headers-$(uname -r)
 
-Blacklist Nouveau
+# Blacklist Nouveau
 
 nano /etc/modprobe.d/blacklist.conf
 
 blacklist nouveau
 
-Save, Close
+# Save, Close
 
 update-initramfs -u
 
-Reboot
+# Reboot
 
-Install Dependencies
+# Install Dependencies
 
 apt install build-essential
 
-Download Drivers
+# Download Drivers
 
 wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.48.07.run
 
-Nvidia driver site: https://www.nvidia.com/Download/index...
-Make driver file executable
+# Nvidia driver site: https://www.nvidia.com/Download/index...
+# Make driver file executable
 
-chmod +x (YOURDRIVERFILE)
+chmod +x NVIDIA-Linux-x86_64-515.48.07.run
 
-Install the drivers
+# Install the drivers
 
-./(YOURDRIVERFILE)
+./NVIDIA-Linux-x86_64-515.48.07.run
 
-Make sure drivers load when restarted
+# Make sure drivers load when restarted
 
 nano /etc/modules-load.d/modules.conf
 
-Add these lines
+# Add these lines
 
 # Nvidia modules
 nvidia
 nvidia-modeset
 nvidia_uvm
 
-Save, Close
+# Save, Close
 
 echo -e '\n# load nvidia modules\nnvidia-drm\nnvidia-uvm' >> /etc/modules-load.d/modules.conf
 
-Update initramfs
+# Update initramfs
 
 update-initramfs -u
 
-Create udev rules
+# Create udev rules
 
 nano /etc/udev/rules.d/70-nvidia.rules
 
-Add lines
+# Add lines
 
 KERNEL=="nvidia", RUN+="/bin/bash -c '/usr/bin/nvidia-smi -L && /bin/chmod 666 /dev/nvidia*'"
 KERNEL=="nvidia_modeset", RUN+="/bin/bash -c '/usr/bin/nvidia-modprobe -c0 -m && /bin/chmod 666 /dev/nvidia-modeset*'"
 KERNEL=="nvidia_uvm", RUN+="/bin/bash -c '/usr/bin/nvidia-modprobe -c0 -u && /bin/chmod 666 /dev/nvidia-uvm*'"
+SUBSYSTEM=="module", ACTION=="add", DEVPATH=="/module/nvidia", RUN+="/usr/bin/nvidia-modprobe -m"
 
-Save, Close
+# Save, Close
 
-Reboot
+# Reboot
 
-Check that the drivers are running
+# Check that the drivers are running
 
 nvidia-smi
 
-Edit the conf container you want to passthrough too
+# Edit the conf container you want to passthrough too
 
 nano /etc/pve/lxc/(YOURCONTAINERID).conf
 
-Add these lines but make sure the path (numbers) are correct
+# Add these lines but make sure the path (numbers) are correct
 
 ls -l /dev/nv*
 
@@ -98,29 +99,29 @@ lxc.mount.entry = /dev/nvidia-uvm dev/nvidia-uvm none bind,optional,create=file
 lxc.mount.entry = /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,create=file
 lxc.mount.entry = /dev/nvram dev/nvram none bind,optional,create=file
 
-Start the container
+# Start the container
 
 apt update && apt upgrade -y
 
-Download Drivers in the container this time
+# Download Drivers in the container this time
 
 wget (YOURDRIVERS) 
 
-Nvidia driver site: https://www.nvidia.com/Download/index...
+# Nvidia driver site: https://www.nvidia.com/Download/index...
 
-Make driver file executable
+# Make driver file executable
 
-chmod +x (YOURDRIVERFILE)
+chmod +x NVIDIA-Linux-x86_64-515.48.07.run
 
-Run the drivers file with the extension
+# Run the drivers file with the extension
 
-./(YOURDRIVERFILE) --no-kernel-module
+./NVIDIA-Linux-x86_64-515.48.07.run --no-kernel-module
 
-Reboot
+# Reboot
 
 nvidia-smi
 
-Install Plex
+# Install Plex
 
 wget https://downloads.plex.tv/plex-media-...
 
@@ -130,4 +131,4 @@ systemctl enable plexmediaserver.service
 
 systemctl start plexmediaserver.service
 
-Access Plex
+# Access Plex
