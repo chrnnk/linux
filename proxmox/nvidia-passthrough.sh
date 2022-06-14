@@ -53,29 +53,23 @@ ls -alh /dev/nvidia*
 # edit the conf container you want to passthrough too
 nano /etc/pve/lxc/102.conf
 # add these lines but make sure the path (numbers) are correct
-ls -l /dev/nv*
+ls -alh /dev/nvidia*
 # allow cgroup access
-lxc.cgroup2.devices.allow = c 195:0 rw
-lxc.cgroup2.devices.allow = c 195:255 rw
-lxc.cgroup2.devices.allow = c 195:254 rw
-lxc.cgroup2.devices.allow = c 510:0 rw
-lxc.cgroup2.devices.allow = c 510:1 rw
-lxc.cgroup2.devices.allow = c 10:144 rw
+lxc.cgroup2.devices.allow = c 195:* rw
+lxc.cgroup2.devices.allow = c 510:* rw
 # pass through device files
 lxc.mount.entry = /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
 lxc.mount.entry = /dev/nvidiactl dev/nvidiactl none bind,optional,create=file
 lxc.mount.entry = /dev/nvidia-modeset dev/nvidia-modeset none bind,optional,create=file
 lxc.mount.entry = /dev/nvidia-uvm dev/nvidia-uvm none bind,optional,create=file
 lxc.mount.entry = /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,create=file
-lxc.mount.entry = /dev/nvram dev/nvram none bind,optional,create=file
 # start the container
 apt update && apt upgrade -y
-# download drivers in the container this time
+# download drivers in the container this time, make executable
 wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.48.07.run 
-# Nvidia driver site: https://www.nvidia.com/Download/index...
-# make driver file executable
 chmod +x NVIDIA-Linux-x86_64-515.48.07.run
-# run the drivers file with the extension
+# run the drivers file with the extension, kernel modules are not needed
+./NVIDIA-Linux-x86_64-515.48.07.run --check
 ./NVIDIA-Linux-x86_64-515.48.07.run --no-kernel-module
 # reboot
 nvidia-smi
