@@ -14,6 +14,8 @@ nano /etc/modprobe.d/blacklist.conf
 
 blacklist nouveau
 
+Save, Close
+
 update-initramfs -u
 
 Reboot
@@ -46,6 +48,8 @@ nvidia
 nvidia-modeset
 nvidia_uvm
 
+Save, Close
+
 echo -e '\n# load nvidia modules\nnvidia-drm\nnvidia-uvm' >> /etc/modules-load.d/modules.conf
 
 Update initramfs
@@ -61,6 +65,8 @@ Add lines
 KERNEL=="nvidia", RUN+="/bin/bash -c '/usr/bin/nvidia-smi -L && /bin/chmod 666 /dev/nvidia*'"
 KERNEL=="nvidia_modeset", RUN+="/bin/bash -c '/usr/bin/nvidia-modprobe -c0 -m && /bin/chmod 666 /dev/nvidia-modeset*'"
 KERNEL=="nvidia_uvm", RUN+="/bin/bash -c '/usr/bin/nvidia-modprobe -c0 -u && /bin/chmod 666 /dev/nvidia-uvm*'"
+
+Save, Close
 
 Reboot
 
