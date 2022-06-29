@@ -6,6 +6,11 @@ collection of scripts for linux
 ```sh
 tail -f /var/log/syslog
 ```
+#### Restart networking with ifupdown
+
+```sh
+ifdown -a && ifup -a
+```
 #### Look at the parameters in the config file
 
 ```sh
