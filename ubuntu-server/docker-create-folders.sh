@@ -8,5 +8,5 @@ mkdir scripts
 mkdir secrets
 mkdir shared
 mkdir compose
-touch .env
+touch ~/docker/.env
 wget -O .env https://raw.githubusercontent.com/chrxnn/docker/main/docker.env
