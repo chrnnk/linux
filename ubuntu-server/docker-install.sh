@@ -1,3 +1,4 @@
+#! wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/ubuntu-server/docker-install.sh | bash
 ## SETUP USERS
 # https://github.com/chrxnn/linux/blob/main/ubuntu-server/users-setup.sh
 ## UPDATE ALL, REBOOT IF NEEDED
@@ -25,11 +26,11 @@ docker-compose -v
 # create docker group. should have been created already but just in case
 cat /etc/group
 # if no docker group at bottom of this list, run following
-sudo groupadd docker
+# sudo groupadd docker
 # list groups of current user
 groups
 # add user to docker group if not already
-sudo usermod -aG docker ${USER}
+# sudo usermod -aG docker ${USER}
 # log back out and back in, test running "docker ps" without sudo
 docker ps
 # make sure docker autostarts after reboot
