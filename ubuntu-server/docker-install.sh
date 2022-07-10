@@ -13,7 +13,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt a
 # install docker-ce, the full fat docker from the docker repo, not the basic docker.io included in debian repos
 sudo apt install docker-ce -y
 # check that docker is running
-sudo systemctl status docker
+# sudo systemctl status docker
 # verify this command works
 sudo docker ps -a
 sudo docker run hello-world
@@ -34,4 +34,5 @@ sudo usermod -aG docker ${USER}
 # log back out and back in, test running "docker ps" without sudo
 docker ps
 # make sure docker autostarts after reboot
-sudo systemctl status docker
+sudo reboot
+# sudo systemctl status docker
