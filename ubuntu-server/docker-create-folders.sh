@@ -1,5 +1,7 @@
 #!
 cd ~
+mkdir docker
+cd docker
 mkdir appdata
 mkdir logs
 mkdir scripts
