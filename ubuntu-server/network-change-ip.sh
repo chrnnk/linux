@@ -1,4 +1,8 @@
-sudo nano /etc/netplan/00-installer-config.yaml
+#!
+cd /etc/netplan
+ls
+sudo nano FILENAME.yaml
+# fix networking
 ```
 network:
   ethernets:
@@ -11,4 +15,6 @@ network:
         addresses: [1.1.1.1,8.8.8.8]
   version: 2
   ```
-  sudo netplan apply
+sudo netplan try
+sudo netplan apply
+
