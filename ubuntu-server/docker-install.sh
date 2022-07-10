@@ -1,5 +1,5 @@
 ## SETUP USERS
-# https://github.com/chrxnn/linux/blob/main/ubuntu-server/setup-users.sh
+# https://github.com/chrxnn/linux/blob/main/ubuntu-server/users-setup.sh
 ## UPDATE ALL, REBOOT IF NEEDED
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove
 ## DOCKER SETUP
