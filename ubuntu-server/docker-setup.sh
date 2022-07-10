@@ -7,6 +7,5 @@ sudo setfacl -Rm g:docker:rwx /home/$USER/docker
 sudo chown root:root /home/$USER/docker/.env
 sudo chmod 600 /home/$USER/docker/.env
 # set up .env
-sudo nano /home/$USER/docker/.env
-# https://github.com/chrxnn/docker/blob/main/docker.env
-# save file with ctrl+o, enter, then ctrl+x to exit
+wget -O .env https://raw.githubusercontent.com/chrxnn/docker/main/docker.env
+# sudo nano /home/$USER/docker/.env
