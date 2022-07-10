@@ -1,1 +1,1 @@
-qm resize 565 scsi0 +10G
+qm resize 9560 scsi0 +7.988G
