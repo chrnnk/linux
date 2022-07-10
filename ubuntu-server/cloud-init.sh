@@ -13,6 +13,7 @@ qm set 9560 --boot c --bootdisk scsi0
 # Add serial console
 qm set 9560 --serial0 socket --vga serial0
 # DO NOT START YOUR VM
+# Make changes in proxmox webui for cloud-init settings, set net to dhcp, username, etc
 # Create template
 qm template 9560
 # Clone template
