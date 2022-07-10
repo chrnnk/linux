@@ -2,7 +2,7 @@
 ## SETUP USERS
 # https://github.com/chrxnn/linux/blob/main/ubuntu-server/users-setup.sh
 ## UPDATE ALL, REBOOT IF NEEDED
-sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ## DOCKER SETUP
 sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release -y
 # get the GPG key which is needed to connect to the Docker repository
