@@ -22,7 +22,6 @@ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 # check that docker-compose is running
 docker-compose -v
-
 # create docker group. should have been created already but just in case
 cat /etc/group
 # if no docker group at bottom of this list, run following
