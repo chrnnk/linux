@@ -29,9 +29,5 @@ sudo reboot
 # AFTER REBOOT CHECK FOLLOWING:
 # DOCKER AUTOSTART AFTER REBOOT
 # sudo systemctl status docker
-# List groups of current user
-# groups
-# Add user to docker group if not already
-# sudo usermod -aG docker ${USER}
 # Test running docker commands without sudo
 # docker ps -a
