@@ -16,8 +16,8 @@ sudo systemctl status docker
 # verify this command works
 sudo docker ps -a
 sudo docker run hello-world
-# CHANGE LATEST TO CURRENT VERSION NUMBER download latest docker-compose (direct, no repo apparently) CHANGE LATEST to proper version ex "v2.4.1"
-sudo curl -L https://github.com/docker/compose/releases/download/vLATEST/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+# Download latest docker-compose for your platform
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 # made docker-compose executable
 sudo chmod +x /usr/local/bin/docker-compose
 # check that docker-compose is running
@@ -27,7 +27,9 @@ docker-compose -v
 cat /etc/group
 # if no docker group at bottom of this list, run following
 sudo groupadd docker
-# add user to docker group
+# list groups of current user
+groups
+# add user to docker group if not already
 sudo usermod -aG docker ${USER}
 # log back out and back in, test running "docker ps" without sudo
 docker ps
