@@ -17,4 +17,4 @@ qm set 9560 --serial0 socket --vga serial0
 # Create template
 qm template 9560
 # Clone template
-qm clone 9560 135 --name yoshi --full
+qm clone 9560 566 --name docker06 --full
