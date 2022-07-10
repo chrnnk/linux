@@ -9,4 +9,4 @@ mkdir secrets
 mkdir shared
 mkdir compose
 touch ~/docker/.env
-wget -O .env https://raw.githubusercontent.com/chrxnn/docker/main/docker.env
+wget -O ~/docker/.env https://raw.githubusercontent.com/chrxnn/docker/main/docker.env
