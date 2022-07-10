@@ -1,4 +1,4 @@
-#! bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-install-v3.sh)"
+#! bash -c "$(wget -qLO - https://github.com/chrxnn/linux/raw/main/ubuntu-server/docker-install.sh)"
 ## SETUP USERS
 # https://github.com/chrxnn/linux/blob/main/ubuntu-server/users-setup.sh
 ## UPDATE ALL, REBOOT IF NEEDED
