@@ -1,4 +1,4 @@
-#! wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/ubuntu-server/docker-create-folders.sh | bash
+#!  bash -c "$(wget -qLO - https://github.com/chrxnn/linux/raw/main/ubuntu-server/docker-create-folders.sh)"
 cd ~
 mkdir docker
 cd docker
