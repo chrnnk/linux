@@ -26,13 +26,14 @@ docker-compose -v
 # create docker group. should have been created already but just in case
 cat /etc/group
 # if no docker group at bottom of this list, run following
-sudo groupadd docker
-# list groups of current user
-groups
-# add user to docker group if not already
-sudo usermod -aG docker ${USER}
-# log back out and back in, test running "docker ps" without sudo
-docker ps
-# make sure docker autostarts after reboot
+# sudo groupadd docker
 sudo reboot
+# AFTER REBOOT CHECK FOLLOWING:
+# DOCKER AUTOSTART AFTER REBOOT
 # sudo systemctl status docker
+# List groups of current user
+# groups
+# Add user to docker group if not already
+# sudo usermod -aG docker ${USER}
+# Test running docker commands without sudo
+# docker ps -a
