@@ -1,23 +1,63 @@
-adb shell
-# This command activates the remote shell command console on the connected Android smartphone or tablet.
-adb shell pm uninstall -k --user 0
-# Using this, you can easily uninstall the unwanted system apps. To be able to execute it, you must issue 'adb shell' command first.
-# You can then use 'pm uninstall -k --user 0' followed by the Android app package name as shown below.
-pm uninstall -k --user 0 com.whatsapp_2.20.apk
-# This command can help you if you want to remove all the bloatware from your phone.
-# Please note that most system apps don't have the 'Uninstall' option on the device but this command works magically.
-# If you don't know the app package name for the apps you want to remove, you can use adb shell pm list packages to find it out.
-adb shell pm list packages
-# Using the above ADB Shell command, you can print the list of the app package names for all apps installed on your Android device.
-# You can use this command with different parameters to get a more specific list of app packages.
-# For instance, if you want to list the system apps only, use
-adb shell pm list packages -s
-# In order to list all third-party apps installed on your Android phone or tablet, you issue the following command.
-adb shell pm list packages -3
-# Do you want ADB Shell to show the list of all enabled or disabled apps on your device,
-# try the command with '-d' (disabled apps) and '-e' (for enabled apps) parameter.
-adb shell pm list packages -d
-adb shell pm list packages -e
-# Now, if pm list command troubles you or you are unsure that you are making the right choice you should stop right there
-# (uninstalling the wrong app might harm your tablet's operating system) and use another method for identifying which app you want to uninstall.
-# (GUI method - Graphical User Interface) For example: APK Inspector will provide you with a detailed list of installed packages (plus their icon) on your device, once you select an app, extra details will be shown to you & that's how you will get the correct name.of.the.app
+pm uninstall -k --user 0 com.samsung.android.samsungpassautofill
+pm uninstall -k --user 0 com.google.ar.core
+pm uninstall -k --user 0 com.samsung.android.arzone
+pm uninstall -k --user 0 com.sec.android.mimage.avatarstickers
+pm uninstall -k --user 0 com.samsung.android.aremojieditor
+pm uninstall -k --user 0 com.samsung.android.aremoji
+pm uninstall -k --user 0 com.samsung.android.ardrawing
+pm uninstall -k --user 0 com.samsung.android.visionarapps
+pm uninstall -k --user 0 com.samsung.android.samsungpassautofill
+pm uninstall -k --user 0 com.samsung.android.app.routines
+pm uninstall -k --user 0 com.samsung.android.bixby.service
+pm uninstall -k --user 0 com.samsung.android.bixby.agent
+pm uninstall -k --user 0 com.samsung.android.bixby.agent.dummy
+pm uninstall -k --user 0 com.samsung.android.calendar
+pm uninstall -k --user 0 com.samsung.android.beaconmanager
+pm uninstall -k --user 0 com.google.android.projection.gearhead
+pm uninstall -k --user 0 com.samsung.android.app.appsegde
+pm uninstall -k --user 0 com.sec.android.app.popupcalculator
+pm uninstall -k --user 0 com.samsung.android.app.cocktailbarservice
+pm uninstall -k --user 0 com.facebook.katana
+pm uninstall -k --user 0 com.facebook.system
+pm uninstall -k --user 0 com.samsung.android.game.gametools
+pm uninstall -k --user 0 com.samsung.android.game.gamehome
+pm uninstall -k --user 0 com.samsung.android.game.gos
+pm uninstall -k --user 0 com.google.android.googlequicksearchbox
+pm uninstall -k --user 0 com.sec.android.service.health
+pm uninstall -k --user 0 com.sec.android.cover.ledcover
+pm uninstall -k --user 0 com.samsung.android.mdx
+pm uninstall -k --user 0 com.android.hotwordenrollment.okgoogle
+pm uninstall -k --user 0 com.microsoft.skydrive
+pm uninstall -k --user 0 com.netflix.partner.activation
+pm uninstall -k --user 0 com.samsung.android.app.reminder
+pm uninstall -k --user 0 com.samsung.android.scloud
+pm uninstall -k --user 0 com.samsung.android.app.spage
+pm uninstall -k --user 0 com.samsung.android.mateagent
+pm uninstall -k --user 0 com.samsung.android.app.sbrowseredge
+pm uninstall -k --user 0 com.samsung.android.kidsinstaller
+pm uninstall -k --user 0 com.sec.location.nsflp2
+pm uninstall -k --user 0 com.samsung.android.samsungpass
+pm uninstall -k --user 0 com.samsug.android.spayfw
+pm uninstall -k --user 0 com.sec.spp.push
+pm uninstall -k --user 0 com.samsung.knox.securefolder
+pm uninstall -k --user 0 com.samsung.android.fast
+pm uninstall -k --user 0 com.samsung.android.app.settings.bixby
+pm uninstall -k --user 0 com.samsung.android.stickercenter
+pm uninstall -k --user 0 com.samsung.systemui.bixby2
+pm uninstall -k --user 0 com.samsung.android.app.tips
+pm uninstall -k --user 0 de.axelspringer.yana.zeropage
+pm uninstall -k --user 0 com.sec.android.widgetapp.webmanual
+pm uninstall -k --user 0 com.samsung.android.bixby.wakeup
+pm uninstall -k --user 0 com.samsung.android.app.watchmanagerstub
+pm uninstall -k --user 0 com.sec.android.deamonapp
+pm uninstall -k --user 0 com.samsung.android.app.social
+pm uninstall -k --user 0 com.microsoft.appmanager
+pm uninstall -k --user 0 com.sec.android.autodoodle.service
+pm uninstall -k --user 0 com.sec.android.app.clockpackage
+pm uninstall -k --user 0 com.samsung.android.visionintelligence
+pm uninstall -k --user 0 com.samsung.android.bixbyvision.framework
+pm uninstall -k --user 0 com.samsung.android.app.contacts
+pm uninstall -k --user 0 com.samsung.android.providers.contacts
+pm uninstall -k --user 0 com.android.bips
+pm uninstall -k --user 0 com.sec.android.app.samsungapps
+pm uninstall -k --user 0 com.google.audio.hearing.visualization.accessibility.scribe
