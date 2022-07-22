@@ -61,3 +61,4 @@ pm uninstall -k --user 0 com.samsung.android.providers.contacts
 pm uninstall -k --user 0 com.android.bips
 pm uninstall -k --user 0 com.sec.android.app.samsungapps
 pm uninstall -k --user 0 com.google.audio.hearing.visualization.accessibility.scribe
+pm uninstall -k --user 0 com.samsung.android.game.gos
