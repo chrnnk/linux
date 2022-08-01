@@ -14,7 +14,7 @@ update-initramfs -u
 apt install build-essential
 # download drivers
 cd ~
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.48.07.run
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.57/NVIDIA-Linux-x86_64-515.57.run
 # make driver file executable
 chmod +x NVIDIA-Linux-x86_64-515.48.07.run
 # install the drivers, don't worry about updating X
