@@ -13,6 +13,13 @@ wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/crea
 sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 
+
+#### Update everything
+
+```sh
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
+```
+
 #### Tail the syslog
 
 ```sh
