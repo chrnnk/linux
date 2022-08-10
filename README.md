@@ -12,7 +12,7 @@ wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/crea
 ```sh
 sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
-
+du * -sh | sort -hr
 
 #### Update everything
 
