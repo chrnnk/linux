@@ -1,6 +1,13 @@
 # linux
 collection of scripts for linux
 
+#### Add ssh keys
+```sh
+cd .ssh/
+sudo nano authorized_keys
+```
+
+
 #### Run script from github
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
