@@ -7,7 +7,6 @@ cd .ssh/
 sudo nano authorized_keys
 ```
 
-
 #### Run script from github
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
@@ -26,6 +25,9 @@ du * -sh | sort -hr
 #### Update everything
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
+```
+```
+apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
 ```
 
 #### Tail the syslog
