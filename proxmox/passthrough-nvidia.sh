@@ -56,6 +56,7 @@ nano /etc/pve/lxc/102.conf
 ls -alh /dev/nvidia*
 # allow cgroup access
 lxc.cgroup2.devices.allow = c 195:* rw
+lxc.cgroup2.devices.allow = c 506:* rw
 lxc.cgroup2.devices.allow = c 510:* rw
 # pass through device files
 lxc.mount.entry = /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
