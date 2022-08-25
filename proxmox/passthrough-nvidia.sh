@@ -14,12 +14,12 @@ update-initramfs -u
 apt install build-essential
 # download drivers
 cd ~
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.57/NVIDIA-Linux-x86_64-515.57.run
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.65.01/NVIDIA-Linux-x86_64-515.65.01.run
 # make driver file executable
-chmod +x NVIDIA-Linux-x86_64-515.48.07.run
+chmod +x NVIDIA-Linux-x86_64-515.65.01.run
 # install the drivers, don't worry about updating X
-./NVIDIA-Linux-x86_64-515.48.07.run --check
-./NVIDIA-Linux-x86_64-515.48.07.run
+./NVIDIA-Linux-x86_64-515.65.01.run --check
+./NVIDIA-Linux-x86_64-515.65.01.run
 # make sure drivers load when restarted
 echo -e '\n# load nvidia modules\nnvidia-drm\nnvidia-uvm' >> /etc/modules-load.d/modules.conf
 # create udev rules
@@ -66,11 +66,11 @@ lxc.mount.entry = /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,
 # start the container
 apt update && apt upgrade -y
 # download drivers in the container this time, make executable
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.48.07.run 
-chmod +x NVIDIA-Linux-x86_64-515.48.07.run
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/515.48.07/NVIDIA-Linux-x86_64-515.65.01.run 
+chmod +x NVIDIA-Linux-x86_64-515.65.01.run
 # run the drivers file with the extension, kernel modules are not needed
-./NVIDIA-Linux-x86_64-515.48.07.run --check
-./NVIDIA-Linux-x86_64-515.48.07.run --no-kernel-module
+./NVIDIA-Linux-x86_64-515.65.01.run --check
+./NVIDIA-Linux-x86_64-515.65.01.run --no-kernel-module
 # reboot
 nvidia-smi
 # install Plex
