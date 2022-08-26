@@ -1,5 +1,5 @@
 #!/bin/bash
-rsync -av --exclude={'*.jpg','containerd'} /opt/ /mnt/truenas/backups/docker01/`date +%Y-%m-%d`/opt/
+sudo rsync -av --exclude={'*.jpg','containerd'} /opt/ /mnt/truenas/backups/docker01/`date +%Y-%m-%d`/
 00 21 * * * rsync -av --exclude={'*.jpg','containerd'} /opt/ /mnt/truenas/backups/docker01/`date +%Y-%m-%d`/
 00 21 * * * rsync -av --exclude={'*.jpg','containerd'} /home/nick/docker/appdata /mnt/nas/backups/docker02/`date +%Y-%m-%d`/
 
