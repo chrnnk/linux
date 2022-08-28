@@ -1,4 +1,13 @@
 # in the shell of the node
+nano /etc/default/grub
+# look for the line "GRUB_CMDLINE_LINUX_DEFAULT="quiet""
+GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on"
+# save and exit
+update-grub
+echo "options vfio_iommu_type1 allow_unsafe_interrupts=1" > /etc/modprobe.d/iommu_unsafe_interrupts.conf
+echo "options kvm ignore_msrs=1" > /etc/modprobe.d/kvm.conf
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist nvidia" >> /etc/modprobe.d/blacklist.conf
 # check to see what kernel version you are running
 uname -r
 # install headers
