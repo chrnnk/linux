@@ -24,10 +24,6 @@ qm clone 9560 562 --name docker02 --full
 qm clone 9560 563 --name docker03 --full
 qm clone 9560 564 --name docker04 --full
 qm clone 9560 565 --name docker05 --full
-qm clone 9560 566 --name docker06 --full
-qm clone 9560 567 --name docker07 --full
-qm clone 9560 568 --name docker08 --full
-qm clone 9560 569 --name docker09 --full
 # Configure static ips on new clones in WEBUI
 # Write code for this later
 # INSIDE VM RUN:
