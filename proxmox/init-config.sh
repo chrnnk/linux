@@ -6,6 +6,7 @@ bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/
 # PCI passthrough
 # https://pve.proxmox.com/wiki/Pci_passthrough
 nano /etc/default/grub
+# Find the line with "GRUB_CMDLINE_LINUX_DEFAULT" 
 # For Intel CPUs add
 intel_iommu=on
 # For AMD CPUs add
@@ -30,11 +31,3 @@ dmesg | grep 'remapping'
 machine: q35
 hostpci0: 01:00.0,pcie=1
 # Only q35 supports PCI-E
-
-
-
-
-
-# update all lxc's
-bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/update-lxcs.sh)"
-# Find the line with "GRUB_CMDLINE_LINUX_DEFAULT" 
