@@ -1,4 +1,9 @@
-https://github.com/tteck/Proxmox
+VM .conf location
+```
+/etc/pve/qemu-server/VMID.conf
+```
+
+below is from https://github.com/tteck/Proxmox
 
 <details>
 <summary markdown="span"> Proxmox VE 7 Post Install</summary>
