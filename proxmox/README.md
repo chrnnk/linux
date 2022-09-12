@@ -3,6 +3,11 @@ VM .conf location
 /etc/pve/qemu-server/VMID.conf
 ```
 
+change network
+```
+nano /etc/network/interfaces
+```
+
 below is from https://github.com/tteck/Proxmox
 
 <details>
