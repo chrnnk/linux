@@ -1,4 +1,4 @@
-sudo apt update && sudo apt install nala
+sudo apt update && sudo apt install nala -y
 sudo nala fetch
 # edit both files below and add the following lines
 sudo nano ~/.bashrc
