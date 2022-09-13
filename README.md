@@ -10,6 +10,7 @@ sudo nano authorized_keys
 #### Tar.gz
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
+tar -xf archive.tar.gz -C /usr/folder/name
 ```
 
 #### Plex service
