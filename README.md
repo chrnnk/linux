@@ -12,6 +12,12 @@ sudo nano authorized_keys
 tar -czvf archive.tar.gz /usr/folder/name
 ```
 
+#### Plex service
+```sh
+sudo systemctl status plexmediaserver
+```
+
+
 #### Run script from github
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
