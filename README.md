@@ -1,5 +1,5 @@
 # linux
-Collection of scripts for linux. Listed below are commands I frequently use but often forget the exact syntax for.
+Collection of scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
 
 #### Add ssh keys
 ```sh
