@@ -1,6 +1,6 @@
 # linux
 collection of scripts for linux
-
+below are things i frequently use but forget exact syntax
 #### Add ssh keys
 ```sh
 cd .ssh/
