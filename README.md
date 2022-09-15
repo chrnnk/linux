@@ -3,8 +3,7 @@ Collection of scripts for Linux. Listed below are commands I frequently use but 
 
 #### Add ssh keys
 ```sh
-cd .ssh/
-sudo nano authorized_keys
+sudo nano ~/.ssh/authorized_keys
 ```
 
 #### Tar.gz
@@ -30,8 +29,8 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 
 #### Copy files examples
 ```
-cp -avr /mnt/pve/synology/template/iso/*.iso /mnt/pve/nas-raidz-data/template/iso/
-rsync -avp --stats /mnt/pve/synology/template/iso/ /mnt/pve/nas-raidz-data/template/iso/
+cp -avr /folder/*.iso /folder/iso/
+rsync -avp --stats /folder/iso/ /folder/iso/
 ```
 
 #### Show subfolder disk usage for current folder, sorted by largest at top
@@ -47,7 +46,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt a
 apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
 ```
 
-#### Tail the syslog
+#### Tail a log
 ```sh
 tail -f /var/log/syslog
 ```
@@ -57,7 +56,10 @@ tail -f /var/log/syslog
 ifdown -a && ifup -a
 ```
 
-#### Look at the parameters in the config file
+#### Ubuntu server networking
 ```sh
-nano /boot/syslinux.cfg-
+cd /etc/netplan/
+nano filename.yaml
+netplan try
+netplan apply
 ```
