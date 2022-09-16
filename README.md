@@ -9,6 +9,8 @@ sudo nano ~/.ssh/authorized_keys
 #### Tar.gz
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
+```
+```
 tar -xf archive.tar.gz -C /usr/folder/name
 ```
 
@@ -30,7 +32,9 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 #### Copy files examples
 ```
 cp -avr /folder/*.iso /folder/iso/
-rsync -avp --stats /folder/iso/ /folder/iso/
+```
+```
+rsync -avp --stats /folder/iso/ /folder/iso/ --progress
 ```
 
 #### Show subfolder disk usage for current folder, sorted by largest at top
