@@ -16,7 +16,7 @@ cat file.ext | grep --color TextToSearch
 sudo nano ~/.ssh/authorized_keys
 ```
 
-#### Tar.gz
+#### Tar.gz and untar
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
 ```
