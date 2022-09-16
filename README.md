@@ -1,6 +1,13 @@
 # linux
 Collection of scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
 
+#### Uptime, load average
+```sh
+uptime
+cat /prox/loadavg
+htop
+```
+
 #### Cat and grep
 Show line numbers
 ```sh
