@@ -1,6 +1,16 @@
 # linux
 Collection of scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
 
+#### Cat and grep
+Show line numbers
+```sh
+cat -n file.ext
+```
+Colorize grep results
+```sh
+cat file.ext | grep --color TextToSearch
+```
+
 #### Add ssh keys
 ```sh
 sudo nano ~/.ssh/authorized_keys
@@ -10,11 +20,11 @@ sudo nano ~/.ssh/authorized_keys
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
 ```
-```
+```sh
 tar -xf archive.tar.gz -C /usr/folder/name
 ```
 
-#### Service
+#### Services
 ```sh
 sudo systemctl status plexmediaserver
 ```
@@ -30,10 +40,10 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 ```
 
 #### Copy files examples
-```
+```sh
 cp -avr /folder/*.iso /folder/iso/
 ```
-```
+```sh
 rsync -avp --stats /folder/iso/ /folder/iso/ --progress
 ```
 
@@ -46,7 +56,7 @@ du * -sh | sort -hr
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
-```
+```sh
 apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
 ```
 
