@@ -12,7 +12,7 @@ nano /etc/network/interfaces
 
 ### Force stop a stuck VM
 ```ssh
-# (for VM ID 103)
+# Using VM ID 103 for example
 qm unlock 103
 qm stop 103
 # Identify who (process id) has the lock on the VM 
