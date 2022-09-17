@@ -52,7 +52,7 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 cp -avr /folder/*.iso /folder/iso/
 ```
 ```sh
-rsync -avp --stats /folder/iso/ /folder/iso/ --progress
+rsync -avp /folder/iso/ /folder/iso/ --progress --stats
 ```
 
 #### Show subfolder disk usage for current folder, sorted by largest at top
