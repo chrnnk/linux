@@ -1,4 +1,4 @@
-### Optimal Windows VM settings
+# Optimal Windows VM settings
 https://pve.proxmox.com/wiki/Performance_Tweaks#Windows
 
 ## System
