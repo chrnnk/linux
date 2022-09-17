@@ -3,8 +3,7 @@
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-install-v3.sh)"
 # dark mode
 bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install
-# PCI passthrough
-# https://pve.proxmox.com/wiki/Pci_passthrough
+# PCI passthrough https://pve.proxmox.com/wiki/Pci_passthrough
 nano /etc/default/grub
 # Find the line with "GRUB_CMDLINE_LINUX_DEFAULT" 
 # For Intel CPUs add
