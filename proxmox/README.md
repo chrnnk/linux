@@ -1,11 +1,20 @@
 VM .conf location
-```
+```sh
 /etc/pve/qemu-server/VMID.conf
 ```
 
 change network
-```
+```sh
 nano /etc/network/interfaces
+```
+
+# ttek's PVE7 post install script
+```sh
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-install-v3.sh)"
+```
+# ttek's LXC updater
+```sh
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/update-lxcs.sh)"
 ```
 
 below is from https://github.com/tteck/Proxmox
