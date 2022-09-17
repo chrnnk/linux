@@ -3,6 +3,8 @@
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-install.sh)"
 # dark mode
 bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install
+# install sensors
+apt-get install lm-sensors
 # https://pve.proxmox.com/wiki/Pci_passthrough
 nano /etc/kernel/cmdline
 quiet intel_iommu=on iommu=pt pcie_acs_override=downstream video=efifb:off multifunction
