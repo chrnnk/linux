@@ -1,13 +1,25 @@
 ## Proxmox notes
 
-VM .conf location
+### VM .conf location
 ```sh
 /etc/pve/qemu-server/VMID.conf
 ```
 
-change network
+### Change network
 ```sh
 nano /etc/network/interfaces
+```
+
+### Force stop a stuck VM
+```ssh
+# (for VM ID 103)
+qm unlock 103
+qm stop 103
+# Identify who (process id) has the lock on the VM 
+fuser /var/lock/qemu-server/lock-103.conf
+# Kill the process, here process id 48500 for example
+kill 48500
+qm stop 103
 ```
 
 ### ttek's PVE7 post install script
