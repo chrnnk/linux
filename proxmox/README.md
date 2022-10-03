@@ -5,6 +5,11 @@
 /etc/pve/qemu-server/VMID.conf
 ```
 
+### Default storage location
+```sh
+cd /var/lib/vz
+```
+
 ### Change network
 ```sh
 nano /etc/network/interfaces
