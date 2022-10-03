@@ -1,5 +1,5 @@
 # Useful Linux commands
-Collection of scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
+Collection of commands/scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
 
 #### Link to Docker
 https://github.com/chrxnn/docker
