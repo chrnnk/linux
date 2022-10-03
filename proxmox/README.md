@@ -10,6 +10,11 @@
 nano /etc/network/interfaces
 ```
 
+### Check NUMA capabilities
+```
+numactl --hardware
+```
+
 ### Force stop a stuck VM
 ```ssh
 # Using VM ID 103 for example
