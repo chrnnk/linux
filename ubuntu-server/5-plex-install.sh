@@ -10,3 +10,6 @@ sudo systemctl status plexmediaserver
 # Virtual Machine PCIe passthrough (Debian Linux)-
 # Confirm GPU is being passed through-
 lspci
+# cronjob to keep phototranscoder cache clean
+sudo crontab -e
+0 2 * * * sudo find "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Cache/PhotoTranscoder" -name "*.jpg" -type f -mtime +5 -delete
