@@ -27,6 +27,11 @@ cat file.ext | grep --color TextToSearch
 sudo nano ~/.ssh/authorized_keys
 ```
 
+#### Neofetch config
+```sh
+nano ~/.config/neofetch/config.conf
+```
+
 #### Tar.gz and untar
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
