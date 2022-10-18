@@ -68,12 +68,20 @@ rsync -avP /folder/iso/ /folder/iso/ --stats
 du * -sh | sort -hr
 ```
 
-#### Update everything
+#### Updates
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
 ```sh
 apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
+```
+In most cases this will give the kept-back packages what they need to successfully upgrade:
+```sh
+sudo apt-get install <list of packages kept back>
+```
+Force install kept-back packages
+```sh
+sudo apt-get --with-new-pkgs upgrade
 ```
 
 #### Tail a log
