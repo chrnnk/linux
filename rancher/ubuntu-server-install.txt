@@ -1,8 +1,5 @@
 I had this issue on Ubuntu 22.04 i fixed it by editing /etc/default/grub file. Added these values into GRUB_CMDLINE_LINUX:
-
 GRUB_CMDLINE_LINUX="cgroup_memory=1 cgroup_enable=memory swapaccount=1 systemd.unified_cgroup_hierarchy=0"
-
 then did:
-
 sudo update-grub
 sudo reboot
