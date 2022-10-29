@@ -222,4 +222,8 @@ lazyg() {
 	git push
 }
 
+# Starship
+eval "$(starship init bash)"
+
+# Print neofetch on login
 neofetch
