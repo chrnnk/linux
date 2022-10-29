@@ -101,9 +101,23 @@ ifdown -a && ifup -a
 ```
 
 #### Ubuntu server networking
-```sh
-cd /etc/netplan/
-nano filename.yaml
-netplan try
-netplan apply
+```
+cd /etc/netplan
+ls
+sudo nano FILENAME.yaml
+# fix networking
+```
+network:
+  ethernets:
+    ens18:
+      dhcp4: false
+      addresses:
+        -  IPADDRESS/24
+      gateway4: GATEWAY
+      nameservers:
+        addresses: [1.1.1.1,8.8.8.8]
+  version: 2
+  ```
+sudo netplan try
+sudo netplan apply
 ```
