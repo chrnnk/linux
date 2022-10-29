@@ -59,7 +59,7 @@ linkConfig(){
     ln -svf ${GITPATH}/.bashrc ${HOME}/.bashrc
     ## Check if a bashrc file is already there.
     OLD_STARSHIP="${HOME}/.config/starship.toml"
-    if ! [[ -e ${OLD_BASHRC} ]];then
+    if ! [[ -e ${OLD_STARSHIP} ]];then
         echo -e "${YELLOW}Creating starship config file at ${HOME}/.config/starship.toml${RC}"
         mkdir  ${HOME}/.config
         touch  ${HOME}/.config/starship.toml
