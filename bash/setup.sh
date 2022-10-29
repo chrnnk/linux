@@ -63,7 +63,6 @@ linkConfig(){
         echo -e "${YELLOW}Creating starship config file at ${HOME}/.config/starship.toml${RC}"
         mkdir  ${HOME}/.config
         touch  ${HOME}/.config/starship.toml
-        fi
     fi
     ln -svf ${GITPATH}/starship.toml ${HOME}/.config/starship.toml
 }
