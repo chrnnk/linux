@@ -24,17 +24,33 @@ ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```sh
 iotop
 ```
-### Show subfolder disk usage for current folder, sorted by largest at top
+Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
 ```
 
 ## Find file and grep
-### Search files in the current folder
+Search files in the current folder
+```sh
 find . | grep
-### Colorize grep results
+```
+Colorize grep results
 ```sh
 cat file.ext | grep --color TextToSearch
+```
+
+## Copy files examples
+```sh
+cp -i
+mv -i
+rm -iv
+mkdir -p
+cp -avr /folder/*.iso /folder/iso/
+rsync -avP /folder/iso/ /folder/iso/ --stats
+```
+Copy file from website
+```sh
+sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 
 ## Add ssh keys
@@ -58,23 +74,9 @@ tar -xf archive.tar.gz -C /usr/folder/name
 sudo systemctl status plexmediaserver
 ```
 
-### Run script from github
+### Bash
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
-```
-
-## Copy files examples
-```sh
-cp -i
-mv -i
-rm -iv
-mkdir -p
-cp -avr /folder/*.iso /folder/iso/
-rsync -avP /folder/iso/ /folder/iso/ --stats
-```
-### Copy file from website
-```sh
-sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 
 ## Updates
