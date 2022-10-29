@@ -57,7 +57,7 @@ linkConfig(){
     echo -e "${YELLOW}Linking new bash and starship config file...${RC}"
     ## Make symbolic link.
     ln -svf ${GITPATH}/.bashrc ${HOME}/.bashrc
-    ## Check if a bashrc file is already there.
+    ## Check if a ~/.config/starship.toml file is already there.
     OLD_STARSHIP="${HOME}/.config/starship.toml"
     if ! [[ -e ${OLD_STARSHIP} ]];then
         echo -e "${YELLOW}Creating starship config file at ${HOME}/.config/starship.toml${RC}"
