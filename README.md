@@ -27,6 +27,13 @@ iotop
 Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
+diskspace = "du -S | sort -n -r |more"
+folders = 'du -h --max-depth=1'
+folderssort = 'find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
+tree = 'tree -CAhF --dirsfirst'
+treed = 'tree -CAFd'
+mountedinfo = 'df -hT'
+
 ```
 
 ## Find file and grep
@@ -67,6 +74,12 @@ nano ~/.config/neofetch/config.conf
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
 tar -xf archive.tar.gz -C /usr/folder/name
+mktar = 'tar -cvf'
+mkbz2 = 'tar -cvjf'
+mkgz = 'tar -cvzf'
+untar = 'tar -xvf'
+unbz2 = 'tar -xvjf'
+ungz = 'tar -xvzf'
 ```
 
 ## Services
@@ -75,8 +88,13 @@ sudo systemctl status plexmediaserver
 ```
 
 ### Bash
+Run script from website
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
+```
+Type clipboard as keystrokes
+```sh
+sleep 3; xdotool type "$(xclip -o -selection clipboard)"
 ```
 
 ## Updates
@@ -104,6 +122,7 @@ sudo apt-get --with-new-pkgs upgrade
 ## Logging
 ```sh
 tail -f /var/log/syslog
+sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f
 ```
 
 ## Networking
