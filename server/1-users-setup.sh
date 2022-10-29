@@ -1,8 +1,8 @@
 #!
 ## Change password after initial setup
 passwd
-## Add your user to sudo group
-sudo usermod -aG sudo USERNAME
+## Add your user to sudo group if you can't sudo
+# sudo usermod -aG sudo USERNAME
 ## ALLOW YOUR USER TO RUN SUDO WITHOUT PASSWORD PROMPT:
 sudo EDITOR=nano visudo
 # add the following line to the end of the file:
