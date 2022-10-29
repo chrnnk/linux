@@ -3,7 +3,6 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt a
 mkdir ~/github
 cd ~/github
 git clone https://github.com/chrxnn/linux
-# chmod +x ./linux/bash/setup.sh
 chmod +x ${HOME}/github/linux/bash/setup.sh
 ${HOME}/github/linux/bash/setup.sh
 # sudo nala fetch
