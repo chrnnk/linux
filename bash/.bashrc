@@ -50,13 +50,8 @@ if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
 if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 
 # Set the default editor
-# export EDITOR=nvim
-# export VISUAL=nvim
-# alias pico='edit'
-# alias spico='sedit'
-# alias nano='edit'
-# alias snano='sedit'
-# alias vim='nvim'
+export EDITOR=nano
+export VISUAL=nano
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -73,21 +68,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-#######################################################
-# MACHINE SPECIFIC ALIAS'S
-#######################################################
-
-# Alias's for SSH
-# alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
-
-# Alias's to change the directory
-# alias web='cd /var/www/html'
-
-# Alias's to mount ISO files
-# mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
-# umount /home/NAMEOFISO.iso
-# (Both commands done as root only.)
 
 #######################################################
 # GENERAL ALIAS'S

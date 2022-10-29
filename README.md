@@ -10,6 +10,11 @@ uptime
 cat /prox/loadavg
 htop
 iotop
+
+ps auxf
+ping -c 10
+less -R
+date='date "+%Y-%m-%d %A %T %Z"'
 ```
 
 ## Cat and grep
@@ -56,6 +61,10 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 ```
 
 ## Copy files examples
+cp -i
+mv -i
+rm -iv
+mkdir -p
 ```sh
 cp -avr /folder/*.iso /folder/iso/
 ```
