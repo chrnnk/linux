@@ -116,6 +116,7 @@ network:
       nameservers:
         addresses: [1.1.1.1,8.8.8.8]
   version: 2
+# save file
 sudo netplan try
 sudo netplan apply
 ```
