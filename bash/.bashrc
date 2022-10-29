@@ -93,12 +93,12 @@ sudo() {
   fi
 }
 # Change directory aliases
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd ...='cd ../..'
-alias cd....='cd ../../..'
-alias cd ....='cd ../../..'
 alias cd.....='cd ../../../..'
+alias cd....='cd ../../..'
+alias cd...='cd ../..'
+alias cd..='cd ..'
+alias cd ...='cd ../..'
+alias cd ....='cd ../../..'
 alias cd .....='cd ../../../..'
 alias ..='cd ..'
 alias ...='cd ../..'
