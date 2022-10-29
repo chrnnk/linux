@@ -90,7 +90,7 @@ Force install kept-back packages
 sudo apt-get --with-new-pkgs upgrade
 ```
 
-#### Tail a log
+#### Logging
 ```sh
 tail -f /var/log/syslog
 ```
@@ -106,7 +106,6 @@ cd /etc/netplan
 ls
 sudo nano FILENAME.yaml
 # fix networking
-```
 network:
   ethernets:
     ens18:
@@ -117,7 +116,6 @@ network:
       nameservers:
         addresses: [1.1.1.1,8.8.8.8]
   version: 2
-  ```
 sudo netplan try
 sudo netplan apply
 ```
