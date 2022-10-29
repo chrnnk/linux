@@ -7,7 +7,6 @@ https://github.com/chrxnn/docker
 ## Misc commands - uptime, load average, io load, etc
 ```sh
 uptime
-
 ps auxf
 ping -c 10
 less -R
@@ -17,13 +16,14 @@ date='date "+%Y-%m-%d %A %T %Z"'
 ```sh
 cat /prox/loadavg
 htop
-
 ps aux | grep
 ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```
 
 ## Storage Usage
+```sh
 iotop
+```
 ### Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
@@ -50,8 +50,6 @@ nano ~/.config/neofetch/config.conf
 ## Tar.gz and untar
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
-```
-```sh
 tar -xf archive.tar.gz -C /usr/folder/name
 ```
 
