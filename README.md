@@ -24,15 +24,15 @@ ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
 ## Storage Usage
 iotop
-# Show subfolder disk usage for current folder, sorted by largest at top
+### Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
 ```
 
 ## Find file and grep
-# Search files in the current folder
+### Search files in the current folder
 find . | grep
-# Colorize grep results
+### Colorize grep results
 ```sh
 cat file.ext | grep --color TextToSearch
 ```
