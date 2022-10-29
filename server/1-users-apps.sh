@@ -4,7 +4,7 @@ echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 sudo apt install nala -y && sudo apt install qemu-guest-agent -y && sudo apt install neofetch -y
-sudo nala fetch --country US
+# sudo nala fetch --country US
 
 mkdir ~/github
 cd ~/github
