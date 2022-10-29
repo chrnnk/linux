@@ -203,3 +203,5 @@ lazyg() {
 	git commit -m "$1"
 	git push
 }
+
+neofetch
