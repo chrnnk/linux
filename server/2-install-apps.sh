@@ -12,15 +12,15 @@ git clone https://github.com/chrxnn/linux
 #sudo nano /root/.bashrc
 ## add the below
 ## convert apt to nala
-#apt() { 
-#  command nala "$@"
-#}
-#sudo() {
-#  if [ "$1" = "apt" ]; then
-#    shift
-#    command sudo nala "$@"
-#  else
-#    command sudo "$@"
-#  fi
-#}
+apt() { 
+  command nala "$@"
+}
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
 ## save and exit
