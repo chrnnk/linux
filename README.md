@@ -7,22 +7,32 @@ https://github.com/chrxnn/docker
 ## Misc commands - uptime, load average, io load, etc
 ```sh
 uptime
-cat /prox/loadavg
-htop
-iotop
 
 ps auxf
 ping -c 10
 less -R
 date='date "+%Y-%m-%d %A %T %Z"'
 ```
-
-## Cat and grep
-Show line numbers
+## CPU Usage
 ```sh
-cat -n file.ext
+cat /prox/loadavg
+htop
+
+ps aux | grep
+ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```
-Colorize grep results
+
+## Storage Usage
+iotop
+# Show subfolder disk usage for current folder, sorted by largest at top
+```sh
+du * -sh | sort -hr
+```
+
+## Find file and grep
+# Search files in the current folder
+find . | grep
+# Colorize grep results
 ```sh
 cat file.ext | grep --color TextToSearch
 ```
@@ -61,21 +71,15 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 ```
 
 ## Copy files examples
+```sh
 cp -i
 mv -i
 rm -iv
 mkdir -p
-```sh
 cp -avr /folder/*.iso /folder/iso/
-```
-```sh
 rsync -avP /folder/iso/ /folder/iso/ --stats
 ```
 
-## Show subfolder disk usage for current folder, sorted by largest at top
-```sh
-du * -sh | sort -hr
-```
 
 ## Updates
 Update all with sudo
