@@ -58,14 +58,9 @@ tar -xf archive.tar.gz -C /usr/folder/name
 sudo systemctl status plexmediaserver
 ```
 
-## Run script from github
+### Run script from github
 ```sh
 wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
-```
-
-## Copy file from website
-```sh
-sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 
 ## Copy files examples
@@ -77,7 +72,10 @@ mkdir -p
 cp -avr /folder/*.iso /folder/iso/
 rsync -avP /folder/iso/ /folder/iso/ --stats
 ```
-
+### Copy file from website
+```sh
+sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
+```
 
 ## Updates
 Update all with sudo
@@ -106,9 +104,18 @@ sudo apt-get --with-new-pkgs upgrade
 tail -f /var/log/syslog
 ```
 
-## Restart networking with ifupdown
+## Networking
+Restart all network adapters
 ```sh
 ifdown -a && ifup -a
+```
+Show current network connections to the server
+```sh
+netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | sort | uniq -c | sort -n | sed -e 's/^ *//' -e 's/ *\$//'
+```
+Show open ports
+```sh
+netstat -nape --inet
 ```
 
 ## Ubuntu server networking
