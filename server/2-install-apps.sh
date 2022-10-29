@@ -3,7 +3,7 @@ sudo apt update && sudo apt install nala -y && sudo apt install qemu-guest-agent
 mkdir ~/github
 cd ~/github
 git clone https://github.com/chrxnn/linux
-chmod +x ./linus/bash/setup.sh
+chmod +x ./linux/bash/setup.sh
 ./setup.sh
 sudo nala fetch
 # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
