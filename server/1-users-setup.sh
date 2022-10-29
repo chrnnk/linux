@@ -1,8 +1,6 @@
-#!
-## Change password after initial setup
-passwd
-## Add your user to sudo group if you can't sudo
-# sudo usermod -aG sudo USERNAME
+#!/bin/bash
+
+echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 ## ALLOW YOUR USER TO RUN SUDO WITHOUT PASSWORD PROMPT:
 # sudo EDITOR=nano visudo
 # add the following line to the end of the file:
