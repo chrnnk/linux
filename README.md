@@ -69,11 +69,17 @@ du * -sh | sort -hr
 ```
 
 #### Updates
+Update all with sudo
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
+Update all without sudo
 ```sh
 apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
+```
+Update all with sudo and nala alias
+```sh
+sudo apt update && sudo apt upgrade -y && sudo \apt dist-upgrade -y && sudo apt autoremove -y
 ```
 In most cases this will give the kept-back packages what they need to successfully upgrade:
 ```sh
