@@ -1,5 +1,5 @@
 # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/server/2-install-apps.sh | bash
-sudo apt update && sudo apt install nala -y
+sudo apt update && sudo apt install nala -y && sudo apt install qemu-guest-agent -y
 mkdir ~/github
 cd ~/github
 git clone https://github.com/chrxnn/linux
