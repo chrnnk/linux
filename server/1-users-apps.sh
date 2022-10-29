@@ -1,4 +1,4 @@
-#!/bin/bash # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/server/2-install-apps.sh | bash
+#!/bin/bash # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/server/1-users-apps.sh | bash
 
 echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
