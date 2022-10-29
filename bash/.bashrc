@@ -3,6 +3,7 @@ iatest=$(expr index "$-" i)
 
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
+# https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
 #######################################################
 
 # Source global definitions
