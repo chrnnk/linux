@@ -5,4 +5,4 @@ cd ~/github
 git clone https://github.com/chrxnn/linux
 chmod +x ./linux/bash/setup.sh
 ./linux/bash/setup.sh
-sudo nala fetch
+# sudo nala fetch
