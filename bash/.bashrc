@@ -1,13 +1,6 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
-# mkdir ~/github
-# cd ~/github
-# git clone https://github.com/chrxnn
-# cd linus/bash
-# chmod +x setup.sh
-# ./setup.sh
-
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 # https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
