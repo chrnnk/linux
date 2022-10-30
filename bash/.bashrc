@@ -223,4 +223,5 @@ lazyg() {
 eval "$(starship init bash)"
 
 # Print neofetch on login
+echo
 neofetch
