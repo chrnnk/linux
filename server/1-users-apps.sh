@@ -11,4 +11,4 @@ git clone https://github.com/chrxnn/linux
 chmod +x ${HOME}/github/linux/bash/setup.sh
 ${HOME}/github/linux/bash/setup.sh
 
-sudo nala fetch --country US
+echo "run sudo nala fetch --country US"
