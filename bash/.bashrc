@@ -224,6 +224,7 @@ eval "$(starship init bash)"
 
 # Print neofetch on login
 echo
+host=$(hostname)
 if [[ $host = *plex* ]]
 then
         neofetch --ascii ~/github/linux/bash/plex.ascii
