@@ -93,21 +93,18 @@ sudo() {
   fi
 }
 # Change directory aliases
-echo 4
 alias cd.....='cd ../../../..'
-echo 3
 alias cd....='cd ../../..'
-echo 2
 alias cd...='cd ../..'
-echo 1
 alias cd..='cd ..'
-echo "end of cds"
 alias cd ...='cd ../..'
 alias cd ....='cd ../../..'
+echo 1
 alias cd .....='cd ../../../..'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+echo 2
 alias .....='cd ../../../..'
 
 # Remove a directory and all files
