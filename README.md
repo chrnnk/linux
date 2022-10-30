@@ -63,6 +63,7 @@ sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/c
 ## Add ssh keys
 ```sh
 sudo nano ~/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" | sudo tee ~/.ssh/authorized_keys
 ```
 
 ## Neofetch config
