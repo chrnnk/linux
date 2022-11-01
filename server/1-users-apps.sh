@@ -37,7 +37,7 @@ GREEN='\e[32m'
 PURPLE='\e[35m'
 
 echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
-echo -e "${Green}echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers${ColorOff}"
+echo -e "${Green}echo "$\{USER\}  ALL=\(ALL\) NOPASSWD:ALL" | sudo tee /etc/sudoers${ColorOff}"
 echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
 echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
