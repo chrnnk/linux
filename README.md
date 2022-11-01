@@ -1,5 +1,5 @@
 # Useful Linux commands
-[![wakatime](https://wakatime.com/badge/github/chrxnn/linux.svg)](https://wakatime.com/badge/github/chrxnn/linux)
+[![wakatime](https://wakatime.com/badge/github/chrxnn/linux.svg)](https://wakatime.com/badge/github/chrxnn/linux)  
 Collection of commands/scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for.
 
 ## Link to Docker
