@@ -34,7 +34,6 @@ folderssort = 'find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 tree = 'tree -CAhF --dirsfirst'
 treed = 'tree -CAFd'
 mountedinfo = 'df -hT'
-
 ```
 
 ## Find file and grep
@@ -59,6 +58,14 @@ rsync -avP /folder/iso/ /folder/iso/ --stats
 Copy file from website
 ```sh
 sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
+```
+
+## Grub commands
+```sh
+/etc/default/grub
+sudo cp /etc/default/grub /etc/default/grub.bak
+sudo nano /etc/default/grub
+sudo update-grub
 ```
 
 ## Add ssh keys
