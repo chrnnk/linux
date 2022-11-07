@@ -5,7 +5,7 @@ Collection of commands/scripts for Linux. Listed below are commands I frequently
 ## Link to Docker
 https://github.com/chrxnn/docker
 
-## Misc commands - uptime, load average, io load, etc
+### Misc commands - uptime, load average, io load, etc
 ```sh
 uptime
 ps auxf
@@ -13,7 +13,7 @@ ping -c 10
 less -R
 date='date "+%Y-%m-%d %A %T %Z"'
 ```
-## CPU Usage
+### CPU Usage
 ```sh
 cat /prox/loadavg
 htop
@@ -21,7 +21,7 @@ ps aux | grep
 ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```
 
-## Storage Usage
+### Storage
 ```sh
 iotop
 ```
@@ -35,8 +35,12 @@ tree = 'tree -CAhF --dirsfirst'
 treed = 'tree -CAFd'
 mountedinfo = 'df -hT'
 ```
+### Check power on hours for all drives
+```sh
+for drive in $(ls -la /dev | grep -Ev 'sda|sd[a-z][0-9]' | grep sd[a-z] | awk '{print $10}'); do hours=$(smartctl --all /dev/${drive} | grep Power_On_Hours | awk '{print $10}'); echo "Power on Hours for ${drive}: ${hours}"; echo ''; done
+```
 
-## Find file and grep
+### Find file and grep
 Search files in the current folder
 ```sh
 find . | grep
@@ -46,7 +50,7 @@ Colorize grep results
 cat file.ext | grep --color TextToSearch
 ```
 
-## Copy files examples
+### Copy files examples
 ```sh
 cp -i
 mv -i
@@ -60,7 +64,7 @@ Copy file from website
 sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 
-## Grub commands
+### Grub commands
 ```sh
 /etc/default/grub
 sudo cp /etc/default/grub /etc/default/grub.bak
@@ -68,17 +72,17 @@ sudo nano /etc/default/grub
 sudo update-grub
 ```
 
-## Add ssh keys
+### Add ssh keys
 ```sh
 sudo nano ~/.ssh/authorized_keys
 ```
 
-## Neofetch config
+### Neofetch config
 ```sh
 nano ~/.config/neofetch/config.conf
 ```
 
-## Tar.gz and untar
+### Tar.gz and untar
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
 tar -xf archive.tar.gz -C /usr/folder/name
@@ -90,7 +94,7 @@ unbz2 = 'tar -xvjf'
 ungz = 'tar -xvzf'
 ```
 
-## Services
+### Services
 ```sh
 sudo systemctl status plexmediaserver
 ```
@@ -105,7 +109,7 @@ Type clipboard as keystrokes
 sleep 3; xdotool type "$(xclip -o -selection clipboard)"
 ```
 
-## Updates
+### Updates
 Update all with sudo
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
