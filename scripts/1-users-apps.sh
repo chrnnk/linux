@@ -64,7 +64,7 @@ echo -e "${Green}Cloning our app-icon repo${GITPATH}${ColorOff}"
 git clone https://github.com/housefisharr/app-icons
 
 echo -e "${Green}Making my bash setup script executable${GITPATH}${ColorOff}"
-chmod +x ${HOME}github/linux/bash/setup.sh
+chmod +x ${HOME}github/linux/customization/bash/setup.sh
 
 echo -e "${Green}Running my bash setup script${GITPATH}${ColorOff}"
-${HOME}github/linux/bash/setup.sh
+${HOME}github/linux/customization/bash/setup.sh
