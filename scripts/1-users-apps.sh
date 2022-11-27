@@ -1,4 +1,4 @@
-#!/bin/bash # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/server/1-users-apps.sh | bash
+#!/bin/bash # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/1-users-apps.sh | bash
 
 ColorOff='\033[0m'       # Text Reset
 Black='\033[0;30m'        # Black
