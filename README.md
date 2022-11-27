@@ -20,7 +20,12 @@ htop
 ps aux | grep
 ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```
-
+### Users
+Create user on Ubuntu server
+```
+sudo useradd -s /path/to/shell -d /home/{dirname} -m -G {secondary-group} {username}
+sudo passwd {username}
+```
 ### Storage
 ```sh
 iotop
