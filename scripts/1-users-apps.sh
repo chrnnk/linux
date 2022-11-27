@@ -42,8 +42,8 @@ echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 pause
-echo -e "${Green}Installing nala, neofetch, and qemu-guest-agent${GITPATH}${ColorOff}"
-sudo apt install nala -y && sudo apt install qemu-guest-agent -y && sudo apt install neofetch -y
+echo -e "${Green}Installing nala and neofetch${GITPATH}${ColorOff}"
+sudo apt install nala -y && sudo apt install neofetch -y
 
 sudo dmidecode -s system-manufacturer
 
@@ -57,10 +57,14 @@ cd ~/github
 echo -e "${Green}Cloning my linux repo${GITPATH}${ColorOff}"
 git clone https://github.com/chrxnn/linux
 
+echo -e "${Green}Cloning my docker repo${GITPATH}${ColorOff}"
+git clone https://github.com/chrxnn/docker
+
+echo -e "${Green}Cloning our app-icon repo${GITPATH}${ColorOff}"
+git clone https://github.com/housefisharr/app-icons
+
 echo -e "${Green}Making my bash setup script executable${GITPATH}${ColorOff}"
 chmod +x ${HOME}/github/linux/bash/setup.sh
 
 echo -e "${Green}Running my bash setup script${GITPATH}${ColorOff}"
 ${HOME}/github/linux/bash/setup.sh
-
-echo -e "${Green}run sudo nala fetch --country US${GITPATH}${ColorOff}"
