@@ -7,6 +7,7 @@ bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/
 apt-get install lm-sensors
 # https://pve.proxmox.com/wiki/Pci_passthrough
 nano /etc/kernel/cmdline
+# add the following to the end of the first line in /etc/kernel/cmdline
 quiet intel_iommu=on iommu=pt pcie_acs_override=downstream video=efifb:off multifunction
 # save changes to the file, then update proxmox-boot-tool
 proxmox-boot-tool refresh
