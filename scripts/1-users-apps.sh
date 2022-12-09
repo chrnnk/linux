@@ -45,7 +45,7 @@ pause
 echo -e "${Green}Installing nala and neofetch${GITPATH}${ColorOff}"
 sudo apt install nala -y && sudo apt install neofetch -y
 
-sudo dmidecode -s system-manufacturer
+# sudo dmidecode -s system-manufacturer
 
 # echo -e "${Green}Removing motd${GITPATH}${ColorOff}"
 # sudo chmod -x /etc/update-motd.d/*
@@ -64,7 +64,7 @@ echo -e "${Green}Cloning our app-icon repo${GITPATH}${ColorOff}"
 git clone https://github.com/housefisharr/app-icons
 
 echo -e "${Green}Making my bash setup script executable${GITPATH}${ColorOff}"
-chmod +x ${HOME}github/linux/customization/bash/setup.sh
+chmod +x ${HOME}/github/linux/customization/bash/setup.sh
 
 echo -e "${Green}Running my bash setup script${GITPATH}${ColorOff}"
-${HOME}github/linux/customization/bash/setup.sh
+${HOME}/github/linux/customization/bash/setup.sh
