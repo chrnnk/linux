@@ -29,7 +29,7 @@ smtp_header_checks = pcre:/etc/postfix/smtp_header_checks
 # edit snmp header config to change sender name
 nano /etc/postfix/smtp_header_checks
 # add the following text
-/^From:.*/ REPLACE From: arm-pve-alerts doesnt@matter.com
+/^From:.*/ REPLACE From: laptop-pve-alerts doesnt@matter.com
 # hash the file
 postmap hash:/etc/postfix/smtp_header_checks
 # check the contents of the file
