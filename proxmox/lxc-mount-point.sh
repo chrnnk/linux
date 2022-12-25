@@ -1,1 +1,1 @@
-mp0: /mnt/my-data-pool,mp=/mnt/host-data
+mp0: /mnt/media,mp=/mnt/media
