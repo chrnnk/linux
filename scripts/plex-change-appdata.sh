@@ -1,4 +1,5 @@
 # Source: symlink plex
+# https://support.plex.tv/articles/201370363-move-an-install-to-another-system/
 # What you wanna do is stop the Plex service On systemd it's
 sudo systemd stop plexmediaserver.service
 # Then copy the Plex data for to a new place
