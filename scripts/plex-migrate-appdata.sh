@@ -1,3 +1,4 @@
+# https://support.plex.tv/articles/201370363-move-an-install-to-another-system/
 # Stop the plexmediaserver service on your old plexmediaserver and your new plexmediaserver
 sudo systemctl stop plexmediaserver
 # Delete the existing library on the NEW server before migrating
