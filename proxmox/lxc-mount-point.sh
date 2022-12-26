@@ -1,1 +1,1 @@
-mp0: /mnt/media,mp=/mnt/media
+mp0: /mnt/pve/media,mp=/mnt/media
