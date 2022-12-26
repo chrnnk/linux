@@ -1,4 +1,4 @@
-# Source: symlink plex
+# https://smyl.es/how-to-move-plex-metadata-and-index-data-to-new-driver-andor-directory-location/
 # https://support.plex.tv/articles/201370363-move-an-install-to-another-system/
 # What you wanna do is stop the Plex service On systemd it's
 sudo systemd stop plexmediaserver.service
