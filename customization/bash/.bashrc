@@ -1,6 +1,9 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
+# for non-interactive sessions stop execution here -- https://serverfault.com/a/805532/67528
+[[ $- != *i* ]] && return
+
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 # https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
