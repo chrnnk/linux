@@ -7,3 +7,8 @@ cd /
 df -h
 resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 df -h
+# inside linux vm if running lvm
+df -TH
+lsblk
+growpart /dev/vda 2
+resize2fs /dev/vda2
