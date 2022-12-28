@@ -18,7 +18,9 @@ vfio
 vfio_iommu_type1
 vfio_pci
 vfio_virqfd
-# Save the file. Reboot, then verify by running:
+# Save the file
+update-initramfs -u -k all
+# Reboot, then verify by running:
 dmesg | grep -e DMAR -e IOMMU
 # There should be a line that looks like "DMAR: IOMMU enabled"
 # To identify if your system has support for IOMMU interrupt remapping:
