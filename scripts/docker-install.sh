@@ -4,7 +4,7 @@
 ## UPDATE ALL, REBOOT IF NEEDED
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ## DOCKER SETUP
-sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release -y
+sudo apt install ca-certificates curl gnupg lsb-release -y
 # get the GPG key which is needed to connect to the Docker repository
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 # add docker repo to APT sources list
