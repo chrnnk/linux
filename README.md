@@ -26,6 +26,10 @@ Create user on Ubuntu server
 sudo useradd -s /path/to/shell -d /home/{dirname} -m -G {secondary-group} {username}
 sudo passwd {username}
 ```
+### Change hostname
+```
+sudo hostnamectl set-hostname NEWHOSTNAME
+```
 ### Storage
 ```sh
 iotop
