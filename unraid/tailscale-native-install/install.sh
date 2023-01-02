@@ -1,7 +1,6 @@
-# /boot/config/go
+#!/bin/bash
 
-# add the following...
+# /boot/config/tailscale/install.sh
 
-# Tailscale
-bash /boot/config/tailscale/install.sh
-bash /boot/config/tailscale/start.sh
+tar -xf /boot/config/tailscale/tailscale_static.tgz -C /usr/bin/ --strip-components=1 --no-anchored tailscale
+tar -xf /boot/config/tailscale/tailscale_static.tgz -C /usr/sbin/ --strip-components=1 --no-anchored tailscaled
