@@ -9,15 +9,17 @@ touch install.sh start.sh
 nano install.sh
 nano start.sh
 chmod +x install.sh start.sh
-bash ./install.sh
 ```
 copy contents of install.sh here and save
 ```
+bash ./install.sh
+```
+copy contents of start.sh here and save  
+```
 bash ./start.sh
 ```
-copy contents of start.sh here and save
-make user script in unraid, set to run daily
-copy contents of user-script.sh here and save, then run it
+make user script in unraid, set to run daily  
+copy contents of user-script.sh here and save, then run it  
 ```
 tailscale login
 tailscale up --ssh
