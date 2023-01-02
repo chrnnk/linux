@@ -6,13 +6,7 @@ cd /boot/config/
 mkdir tailscale
 cd tailscale
 touch install.sh start.sh
-```
-copy contents of install.sh here and save
-```
 nano install.sh
-```
-copy contents of start.sh here and save  
-```
 nano start.sh
 chmod +x install.sh start.sh
 bash ./install.sh
