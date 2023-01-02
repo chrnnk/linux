@@ -48,6 +48,9 @@ pause
 echo -e "${Green}Installing nala and neofetch${GITPATH}${ColorOff}"
 sudo apt install nala -y && sudo apt install neofetch -y
 
+echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
+curl -fsSL https://tailscale.com/install.sh | sh
+
 # sudo dmidecode -s system-manufacturer
 
 # echo -e "${Green}Removing motd${GITPATH}${ColorOff}"
