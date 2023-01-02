@@ -1,5 +1,5 @@
 #! bash -c "$(wget -qLO - https://github.com/chrxnn/linux/raw/main/ubuntu-server/docker-setup.sh)"
-ln -s ~/github/private/docker ~/docker/secrets
+
 sudo apt install acl -y
 sudo chmod 775 /home/$USER/docker
 sudo setfacl -Rdm g:docker:rwx /home/$USER/docker
