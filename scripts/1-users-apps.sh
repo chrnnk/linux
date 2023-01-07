@@ -51,8 +51,8 @@ sudo apt install nala -y && sudo apt install neofetch -y
 echo -e "${Green}Installing ncdu${GITPATH}${ColorOff}"
 sudo apt install ncdu -y
 
-echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
-curl -fsSL https://tailscale.com/install.sh | sh
+# echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
+# curl -fsSL https://tailscale.com/install.sh | sh
 
 # sudo dmidecode -s system-manufacturer
 
