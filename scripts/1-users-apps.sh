@@ -36,8 +36,8 @@ YELLOW='\e[33m'
 GREEN='\e[32m'
 PURPLE='\e[35m'
 
-echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
-echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
+# echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
+# echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
 echo -e "${Green}Adding my ssh key to authorized keys${GITPATH}${ColorOff}"
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" >> ~/.ssh/authorized_keys
