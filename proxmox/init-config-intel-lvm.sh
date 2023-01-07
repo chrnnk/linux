@@ -13,7 +13,7 @@ intel_iommu=on
 update-grub
 # Add the modules to /etc/modules
 nano /etc/modules
-# Intel IOMMU
+# IOMMU
 vfio
 vfio_iommu_type1
 vfio_pci
