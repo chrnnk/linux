@@ -59,6 +59,9 @@ sudo apt install ncdu -y
 # echo -e "${Green}Removing motd${GITPATH}${ColorOff}"
 # sudo chmod -x /etc/update-motd.d/*
 
+echo -e "${Green}Installing git${GITPATH}${ColorOff}"
+sudo apt install git -y
+
 echo -e "${Green}Creating ~/github folder${GITPATH}${ColorOff}"
 mkdir ~/github
 cd ~/github
