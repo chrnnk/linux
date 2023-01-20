@@ -1,4 +1,5 @@
-#!/bin/bash # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/1-users-apps.sh | bash
+#!/bin/bash 
+# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/1-users-apps.sh | bash
 
 ColorOff='\033[0m'       # Text Reset
 Black='\033[0;30m'        # Black
@@ -45,11 +46,8 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2Sosq
 echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 pause
-echo -e "${Green}Installing nala and neofetch${GITPATH}${ColorOff}"
-sudo apt install nala -y && sudo apt install neofetch -y
-
-echo -e "${Green}Installing ncdu${GITPATH}${ColorOff}"
-sudo apt install ncdu -y
+echo -e "${Green}Installing nala ncdu, and neofetch${GITPATH}${ColorOff}"
+sudo apt install nala neofetch ncdu -y
 
 # echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
 # curl -fsSL https://tailscale.com/install.sh | sh
