@@ -1,8 +1,5 @@
-#! 
-# bash -c "$(wget -qLO - https://github.com/chrxnn/linux/raw/main/ubuntu-server/docker-install.sh)"
-
-## SETUP USERS
-# https://github.com/chrxnn/linux/blob/main/ubuntu-server/users-setup.sh
+#!
+# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/3-docker-install.sh | bash
 
 ## UPDATE ALL, REBOOT IF NEEDED
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y

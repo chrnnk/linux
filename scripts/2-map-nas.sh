@@ -1,5 +1,6 @@
 #!
-# bash -c "$(wget -qLO - https://github.com/chrxnn/linux/raw/main/ubuntu-server/map-nas.sh)"
+# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/2-map-nas.sh | bash
+
 cd /mnt/
 sudo mkdir data downloads media
 sudo apt install nfs-common -y
