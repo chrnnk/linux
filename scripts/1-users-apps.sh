@@ -47,7 +47,7 @@ echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 pause
 echo -e "${Green}Installing git, nala ncdu, and neofetch${GITPATH}${ColorOff}"
-sudo apt install nala neofetch ncdu git -y
+sudo apt install nala neofetch ncdu git qemu-guest-agent -y
 
 # echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
 # curl -fsSL https://tailscale.com/install.sh | sh
