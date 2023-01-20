@@ -37,8 +37,8 @@ YELLOW='\e[33m'
 GREEN='\e[32m'
 PURPLE='\e[35m'
 
-# echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
-# echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
+echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
+echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
 echo -e "${Green}Adding my ssh key to authorized keys${GITPATH}${ColorOff}"
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" >> ~/.ssh/authorized_keys
@@ -49,8 +49,8 @@ pause
 echo -e "${Green}Installing git, nala ncdu, and neofetch${GITPATH}${ColorOff}"
 sudo apt install nala neofetch ncdu git qemu-guest-agent -y
 
-# echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
-# curl -fsSL https://tailscale.com/install.sh | sh
+echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
+curl -fsSL https://tailscale.com/install.sh | sh
 
 # sudo dmidecode -s system-manufacturer
 
