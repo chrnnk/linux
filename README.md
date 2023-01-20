@@ -131,6 +131,10 @@ Update all with sudo and nala alias
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo \apt dist-upgrade -y && sudo apt autoremove -y
 ```
+Update all with sudo and nala
+```sh
+sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
+```
 In most cases this will give the kept-back packages what they need to successfully upgrade:
 ```sh
 sudo apt-get install <list of packages kept back>

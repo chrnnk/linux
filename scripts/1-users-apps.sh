@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!
 # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/1-users-apps.sh | bash
 
 ColorOff='\033[0m'       # Text Reset
@@ -31,47 +31,45 @@ On_Purple='\033[45m'      # Purple
 On_Cyan='\033[46m'        # Cyan
 On_White='\033[47m'       # White
 
-EC='\e[0m'
-RED='\e[31m'
-YELLOW='\e[33m'
-GREEN='\e[32m'
-PURPLE='\e[35m'
-
-echo -e "${Green}Allowing current user to run sudo without password verification${GITPATH}${ColorOff}"
+echo -e "${Green}Allowing current user to run sudo without password verification${ColorOff}"
 echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
-echo -e "${Green}Adding my ssh key to authorized keys${GITPATH}${ColorOff}"
+echo -e "${Green}Adding my ssh key to authorized keys${ColorOff}"
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" >> ~/.ssh/authorized_keys
 
-echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
+echo -e "${Green}Updating everything${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
-pause
-echo -e "${Green}Installing git, nala ncdu, and neofetch${GITPATH}${ColorOff}"
+
+echo -e "${Green}Installing git, nala ncdu, and neofetch${ColorOff}"
 sudo apt install nala neofetch ncdu git qemu-guest-agent -y
 
-echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
+echo -e "${Green}Installing tailscale${ColorOff}"
 curl -fsSL https://tailscale.com/install.sh | sh
 
-# sudo dmidecode -s system-manufacturer
-
-# echo -e "${Green}Removing motd${GITPATH}${ColorOff}"
+# echo -e "${Green}Removing motd${ColorOff}"
 # sudo chmod -x /etc/update-motd.d/*
 
-echo -e "${Green}Creating ~/github folder${GITPATH}${ColorOff}"
+echo -e "${Green}Creating ~/github folder${ColorOff}"
 mkdir ~/github
 cd ~/github
 
-echo -e "${Green}Cloning my linux repo${GITPATH}${ColorOff}"
+echo -e "${Green}Cloning my linux repo${ColorOff}"
 git clone https://github.com/chrxnn/linux
 
-echo -e "${Green}Cloning my docker repo${GITPATH}${ColorOff}"
+echo -e "${Green}Cloning my docker repo${ColorOff}"
 git clone https://github.com/chrxnn/docker
 
-echo -e "${Green}Cloning our app-icon repo${GITPATH}${ColorOff}"
+echo -e "${Green}Cloning our app-icon repo${ColorOff}"
 git clone https://github.com/housefisharr/app-icons
 
-echo -e "${Green}Making my bash setup script executable${GITPATH}${ColorOff}"
+echo -e "${Green}Making my bash setup script executable${ColorOff}"
 chmod +x ${HOME}/github/linux/customization/bash/setup.sh
 
-echo -e "${Green}Running my bash setup script${GITPATH}${ColorOff}"
+echo -e "${Green}Fetching faster nala mirrors${ColorOff}"
+sudo nala fetch -c US
+
+echo -e "${Green}Updating everything with nala${ColorOff}"
+sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
+
+echo -e "${Green}Running my bash setup script${ColorOff}"
 ${HOME}/github/linux/customization/bash/setup.sh
