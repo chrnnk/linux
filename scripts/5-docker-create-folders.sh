@@ -6,4 +6,4 @@ mkdir docker
 cd docker
 mkdir appdata logs scripts secrets shared compose
 touch ~/docker/.env
-ln -s ~/github/private/docker ~/docker/secrets
+# ln -s ~/github/private/docker ~/docker/secrets
