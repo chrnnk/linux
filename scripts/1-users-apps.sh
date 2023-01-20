@@ -46,8 +46,8 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2Sosq
 echo -e "${Green}Updating everything${GITPATH}${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 pause
-echo -e "${Green}Installing nala ncdu, and neofetch${GITPATH}${ColorOff}"
-sudo apt install nala neofetch ncdu -y
+echo -e "${Green}Installing git, nala ncdu, and neofetch${GITPATH}${ColorOff}"
+sudo apt install nala neofetch ncdu git -y
 
 # echo -e "${Green}Installing tailscale${GITPATH}${ColorOff}"
 # curl -fsSL https://tailscale.com/install.sh | sh
@@ -56,9 +56,6 @@ sudo apt install nala neofetch ncdu -y
 
 # echo -e "${Green}Removing motd${GITPATH}${ColorOff}"
 # sudo chmod -x /etc/update-motd.d/*
-
-echo -e "${Green}Installing git${GITPATH}${ColorOff}"
-sudo apt install git -y
 
 echo -e "${Green}Creating ~/github folder${GITPATH}${ColorOff}"
 mkdir ~/github
