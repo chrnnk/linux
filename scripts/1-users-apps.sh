@@ -61,7 +61,7 @@ git clone https://github.com/chrxnn/docker
 
 echo -e "${Green}Cloning our app-icon repo, mapping it to ~/docker/app-icons${ColorOff}"
 git clone https://github.com/housefisharr/app-icons
-ln -s ~/githubapp-icons ~/docker/app-icons/png
+ln -s ~/github/app-icons ~/docker/app-icons
 
 echo -e "${Green}Making my bash setup script executable${ColorOff}"
 chmod +x ${HOME}/github/linux/customization/bash/setup.sh
