@@ -27,6 +27,7 @@ dmesg | grep -e DMAR -e IOMMU
 dmesg | grep 'remapping'
 # Check the "PCI-E" checkbox in the GUI when adding your device, or manually add the pcie=1 parameter to your VM config:
 cat /etc/pve/qemu-server/#IDNUMBER#.conf 
-bios: ovmf
-hostpci0: 0000:00:02,pcie=1
-machine: q35
+# bios: ovmf
+# hostpci0: 0000:00:02,pcie=1
+# machine: q35
+sysctl vm.swappiness=0
