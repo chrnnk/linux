@@ -27,5 +27,6 @@ dmesg | grep -e DMAR -e IOMMU
 dmesg | grep 'remapping'
 # If you see the following line: "DMAR-IR: Enabled IRQ remapping in x2apic mode" then remapping is supported. 
 # Check the "PCI-E" checkbox in the GUI when adding your device, or manually add the pcie=1 parameter to your VM config. Only q35 supports PCI-E.
-machine: q35
-hostpci0: 01:00.0,pcie=1
+# machine: q35
+# hostpci0: 01:00.0,pcie=1
+sysctl vm.swappiness=0
