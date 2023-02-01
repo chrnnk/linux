@@ -75,25 +75,12 @@ git clone https://github.com/housefisharr/app-icons
 echo -e "${Green}Making my bash setup script executable${ColorOff}"
 chmod +x ${HOME}/github/linux/customization/bash/setup.sh
 
-echo -e "${Green}Fetching faster nala mirrors${ColorOff}"
-sudo nala fetch -c US
+# echo -e "${Green}Fetching faster nala mirrors${ColorOff}"
+# sudo nala fetch -c US
 
-echo -e "${Green}Updating everything with nala${ColorOff}"
-sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
+echo -e "${Green}Updating everything${ColorOff}"
+# sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
+sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 
 echo -e "${Green}Running my bash setup script${ColorOff}"
 ${HOME}/github/linux/customization/bash/setup.sh
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
