@@ -30,10 +30,6 @@ sudo passwd {username}
 ```
 sudo hostnamectl set-hostname NEWHOSTNAME
 ```
-### Storage
-```sh
-iotop
-```
 Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
