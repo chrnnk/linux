@@ -119,29 +119,25 @@ sleep 3; xdotool type "$(xclip -o -selection clipboard)"
 ```
 
 ### Updates
-Update all with sudo
+Update all with sudo apt
 ```sh
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 ```
-Update all without sudo
-```sh
-apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
-```
-Update all with sudo and nala alias
-```sh
-sudo apt update && sudo apt upgrade -y && sudo \apt dist-upgrade -y && sudo apt autoremove -y
-```
-Update all with sudo and nala
+Update all with sudo nala
 ```sh
 sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
 ```
+Update all without sudo nala
+```sh
+nala update && nala upgrade -y && nala clean && nala autoremove && nala autopurge
+```
 In most cases this will give the kept-back packages what they need to successfully upgrade:
 ```sh
-sudo apt-get install <list of packages kept back>
+sudo apt install <list of packages kept back>
 ```
 Force install kept-back packages
 ```sh
-sudo apt-get --with-new-pkgs upgrade
+sudo apt --with-new-pkgs upgrade
 ```
 
 ## Logging
