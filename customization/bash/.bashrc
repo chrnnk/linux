@@ -77,17 +77,17 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 #######################################################
 # To temporarily bypass an alias, we preceed the command with a \
 # Apt to Nala
-apt() { 
-  command nala "$@"
-}
-sudo() {
-  if [ "$1" = "apt" ]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
+#apt() { 
+#  command "$@"
+#}
+#sudo() {
+#  if [ "$1" = "apt" ]; then
+#    shift
+#    command sudo nala "$@"
+#  else
+#    command sudo "$@"
+#  fi
+#}
 # Change directory aliases
 alias cd.....='cd ../../../..'
 alias cd....='cd ../../..'
