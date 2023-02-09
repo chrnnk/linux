@@ -3,7 +3,7 @@ setterm -term linux -blank 1 -powersave powerdown -powerdown 1 </dev/tty1 >/dev/
 # save to /root/screen-sleep.sh
 # chmod +x ./screen-sleep.sh
 # crontab -e
-@reboot /root/screen-sleep.sh
+# @reboot /root/screen-sleep.sh
 # 0 * * * * /root/screen-sleep.sh
 # 10 * * * * /root/screen-sleep.sh
 # 20 * * * * /root/screen-sleep.sh
