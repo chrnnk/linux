@@ -10,3 +10,4 @@ HandleLidSwitchDocked=ignore
 # ctrl+s to save file, then run
 systemctl restart systemd-logind
 reboot
+# go here https://github.com/chrxnn/linux/blob/main/proxmox/screen-sleep.sh
