@@ -4,7 +4,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-insta
 # Dark mode
 bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install
 # Install sensors
-apt install lm-sensors -y
+apt install lm-sensors htop -y
 # PCI passthrough https://pve.proxmox.com/wiki/Pci_passthrough
 nano /etc/default/grub
 # Find the line with "GRUB_CMDLINE_LINUX_DEFAULT" and add
