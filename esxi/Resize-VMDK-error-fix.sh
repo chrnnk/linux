@@ -1,3 +1,4 @@
+https://www.veeam.com/kb3155
 When you complete Instant VM Recovery from the Veeam Agent backup, then try to edit the VM configuration via ESXi, the following error occurs:
 "Enter a disk size which is larger than its original capacity."
 
