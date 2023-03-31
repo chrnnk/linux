@@ -33,4 +33,3 @@ echo "Power draw is now"
 # Check current power draw of GPU
 nvidia-smi --query-gpu=power.draw --format=csv
 exit
-
