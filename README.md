@@ -33,6 +33,7 @@ sudo hostnamectl set-hostname NEWHOSTNAME
 Show subfolder disk usage for current folder, sorted by largest at top
 ```sh
 du * -sh | sort -hr
+sudo du -shc docker/appdata/* | sort -rh | head -25
 diskspace = "du -S | sort -n -r |more"
 folders = 'du -h --max-depth=1'
 folderssort = 'find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
