@@ -10,6 +10,8 @@ cp containername:/usr/lib/plexmediaserver/ destination/folder
 To check the database integrity
 "Plex SQLite" "/database/location/name.db" "PRAGMA integrity_check"
 sudo ./Plex\ SQLite "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db-fix" "PRAGMA integrity_check"
+sudo ./Plex\ SQLite "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db" "VACUUM"
+sudo ./Plex\ SQLite "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db" "REINDEX"
 
 Copy database
 cp "/database/location/name.db" "/database/location/name.db_old"
