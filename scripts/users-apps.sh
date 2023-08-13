@@ -1,6 +1,5 @@
 #!
 # wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/1-users-apps.sh | bash
-
 ColorOff='\033[0m'       # Text Reset
 Black='\033[0;30m'        # Black
 Red='\033[0;31m'          # Red
@@ -34,6 +33,9 @@ On_White='\033[47m'       # White
 echo -e "${Green}Allowing current user to run sudo without password verification${ColorOff}"
 echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
+mkdir ~/.ssh && cd ~/.ssh
+touch authorized_keys
+
 echo -e "${Green}Adding my ssh key to authorized keys${ColorOff}"
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" >> ~/.ssh/authorized_keys
 
@@ -42,16 +44,14 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt a
 
 echo -e "${Green}Installing git, nala ncdu, and neofetch${ColorOff}"
 sudo apt install nala neofetch ncdu git qemu-guest-agent -y
+# if running in a VM
+#sudo apt install qemu-guest-agent -y
 
 echo -e "${Green}Installing tailscale${ColorOff}"
 curl -fsSL https://tailscale.com/install.sh | sh
 
-# echo -e "${Green}Removing motd${ColorOff}"
-# sudo chmod -x /etc/update-motd.d/*
-
 echo -e "${Green}Creating ~/github folder${ColorOff}"
-mkdir ~/github
-cd ~/github
+mkdir ~/github && cd ~/github
 
 echo -e "${Green}Cloning my linux repo${ColorOff}"
 git clone https://github.com/chrxnn/linux
@@ -68,8 +68,5 @@ chmod +x ${HOME}/github/linux/customization/bash/setup.sh
 echo -e "${Green}Fetching faster nala mirrors${ColorOff}"
 sudo nala fetch -c US
 
-echo -e "${Green}Updating everything with nala${ColorOff}"
-sudo nala update && sudo nala upgrade -y && sudo nala clean && sudo nala autoremove && sudo nala autopurge
-
 echo -e "${Green}Running my bash setup script${ColorOff}"
-${HOME}/github/linux/customization/bash/setup.sh
+~/github/linux/customization/bash/setup.sh
