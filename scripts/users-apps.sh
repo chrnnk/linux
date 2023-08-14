@@ -33,7 +33,8 @@ On_White='\033[47m'       # White
 echo -e "${Green}Allowing current user to run sudo without password verification${ColorOff}"
 echo "${USER}  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 
-mkdir ~/.ssh && cd ~/.ssh
+mkdir ~/.ssh
+cd ~/.ssh
 touch authorized_keys
 
 echo -e "${Green}Adding my ssh key to authorized keys${ColorOff}"
@@ -51,7 +52,8 @@ echo -e "${Green}Installing tailscale${ColorOff}"
 curl -fsSL https://tailscale.com/install.sh | sh
 
 echo -e "${Green}Creating ~/github folder${ColorOff}"
-mkdir ~/github && cd ~/github
+mkdir ~/github
+cd ~/github
 
 echo -e "${Green}Cloning my linux repo${ColorOff}"
 git clone https://github.com/chrxnn/linux
