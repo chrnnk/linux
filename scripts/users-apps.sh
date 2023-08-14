@@ -44,7 +44,7 @@ echo -e "${Green}Updating everything${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 
 echo -e "${Green}Installing git, nala ncdu, and neofetch${ColorOff}"
-sudo apt install curl neofetch ncdu git qemu-guest-agent -y
+sudo apt install curl neofetch ncdu git -y
 # if running in a VM
 #sudo apt install qemu-guest-agent -y
 
@@ -66,9 +66,6 @@ git clone https://github.com/housefisharr/app-icons
 
 echo -e "${Green}Making my bash setup script executable${ColorOff}"
 chmod +x ${HOME}/github/linux/customization/bash/setup.sh
-
-echo -e "${Green}Fetching faster nala mirrors${ColorOff}"
-sudo nala fetch -c US
 
 echo -e "${Green}Running my bash setup script${ColorOff}"
 ~/github/linux/customization/bash/setup.sh
