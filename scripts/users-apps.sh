@@ -43,7 +43,7 @@ echo -e "${Green}Updating everything${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
 
 echo -e "${Green}Installing git, nala ncdu, and neofetch${ColorOff}"
-sudo apt install nala neofetch ncdu git qemu-guest-agent -y
+sudo apt install curl neofetch ncdu git qemu-guest-agent -y
 # if running in a VM
 #sudo apt install qemu-guest-agent -y
 
