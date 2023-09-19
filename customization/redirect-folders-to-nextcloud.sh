@@ -1,5 +1,4 @@
 #!
-ln -s ~/Nextcloud/Documents ~/
 sudo ln -s /home/nick/Nextcloud/Desktop /home/nick
 sudo ln -s /home/nick/Nextcloud/Documents /home/nick
 sudo ln -s /home/nick/Nextcloud/Downloads /home/nick
