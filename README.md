@@ -29,16 +29,10 @@ sudo passwd {username}
 ```
 sudo hostnamectl set-hostname NEWHOSTNAME
 ```
-Show subfolder disk usage for current folder, sorted by largest at top
+### Show subfolder disk usage for current folder
 ```sh
 du * -sh | sort -hr
-sudo du -shc docker/appdata/* | sort -rh | head -25
-diskspace = "du -S | sort -n -r |more"
-folders = 'du -h --max-depth=1'
-folderssort = 'find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-tree = 'tree -CAhF --dirsfirst'
-treed = 'tree -CAFd'
-mountedinfo = 'df -hT'
+du -shc docker/appdata/* | sort -hr | head -25
 ```
 ### Check power on hours for all drives
 ```sh
@@ -57,12 +51,10 @@ cat file.ext | grep --color TextToSearch
 
 ### Copy files examples
 ```sh
-cp -i
-mv -i
-rm -iv
-mkdir -p
+
+rsync -avP /mnt/serenity/folder/ /mnt/nas-media/folder/ --bwlimit=20000
 cp -avr /folder/*.iso /folder/iso/
-rsync -avP /folder/iso/ /folder/iso/ --stats
+rsync -avP /folder/iso/ /folder/iso/ --stats --progress
 ```
 Copy file from website
 ```sh
