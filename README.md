@@ -19,16 +19,6 @@ htop
 ps aux | grep
 ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 ```
-### Users
-Create user on Ubuntu server
-```
-sudo useradd -s /path/to/shell -d /home/{dirname} -m -G {secondary-group} {username}
-sudo passwd {username}
-```
-### Change hostname
-```
-sudo hostnamectl set-hostname NEWHOSTNAME
-```
 ### Show subfolder disk usage for current folder
 ```sh
 du * -sh | sort -hr
@@ -38,7 +28,6 @@ du -shc docker/appdata/* | sort -hr | head -25
 ```sh
 for drive in $(ls -la /dev | grep -Ev 'sda|sd[a-z][0-9]' | grep sd[a-z] | awk '{print $10}'); do hours=$(smartctl --all /dev/${drive} | grep Power_On_Hours | awk '{print $10}'); echo "Power on Hours for ${drive}: ${hours}"; echo ''; done
 ```
-
 ### Find file and grep
 Search files in the current folder
 ```sh
@@ -48,10 +37,8 @@ Colorize grep results
 ```sh
 cat file.ext | grep --color TextToSearch
 ```
-
 ### Copy files examples
 ```sh
-
 rsync -avP /mnt/serenity/folder/ /mnt/nas-media/folder/ --bwlimit=20000
 cp -avr /folder/*.iso /folder/iso/
 rsync -avP /folder/iso/ /folder/iso/ --stats --progress
@@ -60,7 +47,6 @@ Copy file from website
 ```sh
 sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
-
 ### Grub commands
 ```sh
 /etc/default/grub
@@ -68,17 +54,14 @@ sudo cp /etc/default/grub /etc/default/grub.bak
 sudo nano /etc/default/grub
 sudo update-grub
 ```
-
 ### Add ssh keys
 ```sh
 sudo nano ~/.ssh/authorized_keys
 ```
-
 ### Neofetch config
 ```sh
 nano ~/.config/neofetch/config.conf
 ```
-
 ### Tar.gz and untar
 ```sh
 tar -czvf archive.tar.gz /usr/folder/name
@@ -90,12 +73,10 @@ untar = 'tar -xvf'
 unbz2 = 'tar -xvjf'
 ungz = 'tar -xvzf'
 ```
-
 ### Services
 ```sh
 sudo systemctl status plexmediaserver
 ```
-
 ### Bash
 Run script from website
 ```sh
@@ -105,7 +86,6 @@ Type clipboard as keystrokes
 ```sh
 sleep 3; xdotool type "$(xclip -o -selection clipboard)"
 ```
-
 ### Updates
 Update all with sudo apt
 ```sh
@@ -127,13 +107,11 @@ Force install kept-back packages
 ```sh
 sudo apt --with-new-pkgs upgrade
 ```
-
 ## Logging
 ```sh
 tail -f /var/log/syslog
 sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f
 ```
-
 ## Networking
 Restart all network adapters
 ```sh
@@ -147,7 +125,6 @@ Show open ports
 ```sh
 netstat -nape --inet
 ```
-
 ## Ubuntu server networking
 ```
 cd /etc/netplan
