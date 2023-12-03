@@ -1,5 +1,5 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/6-docker-setup.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/6-docker-setup.sh | bash
 
 sudo apt install acl -y
 sudo chmod 775 /home/$USER/docker

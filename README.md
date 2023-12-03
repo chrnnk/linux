@@ -2,7 +2,7 @@
 Collection of commands/scripts for Linux. Listed below are commands I frequently use but often forget the exact syntax for:
 
 ## Link to Docker
-https://github.com/chrxnn/docker
+https://github.com/chrnnk/docker
 
 ### Misc commands - uptime, load average, io load, etc
 ```sh
@@ -45,7 +45,7 @@ rsync -avP /folder/iso/ /folder/iso/ --stats --progress
 ```
 Copy file from website
 ```sh
-sudo curl -L https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
+sudo curl -L https://raw.githubusercontent.com/chrnnk/docker/main/ubuntu-setup/create-folders.sh -o ~/scripts/create-folders.sh
 ```
 ### Grub commands
 ```sh
@@ -80,7 +80,7 @@ sudo systemctl status plexmediaserver
 ### Bash
 Run script from website
 ```sh
-wget -O - https://raw.githubusercontent.com/chrxnn/docker/main/ubuntu-setup/create-folders.sh | bash
+wget -O - https://raw.githubusercontent.com/chrnnk/docker/main/ubuntu-setup/create-folders.sh | bash
 ```
 Type clipboard as keystrokes
 ```sh

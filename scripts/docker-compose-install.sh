@@ -1,5 +1,5 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/4-docker-compose-install.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/4-docker-compose-install.sh | bash
 
 # Download latest docker-compose for your platform
 sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose

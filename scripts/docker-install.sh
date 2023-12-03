@@ -1,5 +1,5 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/docker-install.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/docker-install.sh | bash
 
 ## UPDATE ALL, REBOOT IF NEEDED
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y

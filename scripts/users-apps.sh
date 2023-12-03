@@ -1,5 +1,5 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/users-apps.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/users-apps.sh | bash
 ColorOff='\033[0m'       # Text Reset
 Black='\033[0;30m'        # Black
 Red='\033[0;31m'          # Red
@@ -56,10 +56,10 @@ mkdir ~/github
 cd ~/github
 
 echo -e "${Green}Cloning my linux repo${ColorOff}"
-git clone https://github.com/chrxnn/linux
+git clone https://github.com/chrnnk/linux
 
 echo -e "${Green}Cloning my docker repo${ColorOff}"
-git clone https://github.com/chrxnn/docker
+git clone https://github.com/chrnnk/docker
 
 echo -e "${Green}Cloning our app-icon repo, mapping it to ~/docker/app-icons${ColorOff}"
 git clone https://github.com/housefisharr/app-icons

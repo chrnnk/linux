@@ -1,5 +1,5 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrxnn/linux/main/scripts/docker-create-folders.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/docker-create-folders.sh | bash
 
 mkdir ~/github
 mkdir ~/docker
