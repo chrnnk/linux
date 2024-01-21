@@ -15,8 +15,7 @@ sleep 5
 ## DOCKER INSTALL
 printf '\nInstalling Docker\n\n'
 sleep 5
-curl -fsSL https://get.docker.com -o get-docker.sh
-wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/docker-install.sh | bash
+wget -O - https://get.docker.com | bash
 printf '\nDocker installed successfully\n\n'
 sleep 5
 ## DOCKER COMPOSE INSTALL
