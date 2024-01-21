@@ -1,7 +1,7 @@
-DB Tech's Docker and Docker Compose Install
+Docker and Docker Compose Install
 ===
 
-## Install Using Root (Non-Root method below)
+## Install Using Root
 
 To install the newest versions of sudo (optional depending on which script you use), curl, Docker, and docker compose, simply ssh into your server, then clone this repository with: 
 
