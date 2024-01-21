@@ -1,8 +1,8 @@
 #!
-# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/scripts/docker-install.sh | bash
+# wget -O - https://raw.githubusercontent.com/chrnnk/linux/main/docker-install/docker-install.sh | bash
 ## UPDATE EVERYTHING
 printf '\nUpdating everything\n\n'
-sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
+apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y
 printf '\nEverything successfully updated\n\n'
 sleep 5
 ## DOCKER INSTALL
@@ -20,6 +20,6 @@ curl -L https://raw.githubusercontent.com/docker/compose/${COMPOSE_VERSION}/cont
 printf '\nDocker Compose installed successfully\n\n'
 sleep 5
 # check that docker is running and working
-sudo docker ps -a
-sudo docker run hello-world
+docker ps -a
+docker run hello-world
 docker-compose -v
