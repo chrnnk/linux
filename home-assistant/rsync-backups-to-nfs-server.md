@@ -1,9 +1,9 @@
 ## Home Assistant Add-on: Terminal & SSH
 Follow these steps to get the add-on installed on your system:  
--Enable advanced mode by going to Profile -> and turn on Advanced Mode.  
--Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on store.  
--Find the "Terminal & SSH" add-on and click it.  
--Click on the "INSTALL" button.
+- Enable advanced mode by going to Profile -> and turn on Advanced Mode.  
+- Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on store.  
+- Find the "Terminal & SSH" add-on and click it.  
+- Click on the "INSTALL" button.
 ## Testing rsync with password
 In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
 If you're unsure and using Unraid, this would be ```root``` and your Unraid server's IP address.  
