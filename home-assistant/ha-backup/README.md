@@ -41,8 +41,11 @@ You can test that this is working with the following command in the Home Assista
 If this worked, type ```exit``` to leave the SSH session and return to Home Assistant Terminal.  
 
 ### NOT WORKING - Create the backup script
-This section is not working yet. Seems like scripts saved in /root/ are not persistent after a reboot and disappear. Same with the crontab entry.  
-However, the backup job will still work when ran manually from the terminal with ```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/```
+This section is not working yet. Seems like scripts saved in /root/ are not persistent after a reboot and disappear. 
+
+Same with the crontab entry.  
+
+However, the backup job will still work when ran manually from the terminal with ```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/```.  
 
 Your terminal should now read ```[core-ssh ~]$ ```. If not, type ```cd ~```.  
 
