@@ -5,7 +5,7 @@ Follow these steps to get the add-on installed on your system:
 - Find the "Terminal & SSH" add-on and click it.  
 - Click on the "INSTALL" button.
 ## Testing rsync with password
-```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/SHARENAME/SUBFOLDER/```  
+Example: ```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/SHARENAME/SUBFOLDER/```  
 
 Replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
 
