@@ -1,5 +1,5 @@
 ## Home Assistant Add-on: Terminal & SSH
-Follow these steps to get the add-on installed on your system:  
+#### Follow these steps to get the add-on installed on your system:  
 To enable advanced mode, go to Profile -> and turn on Advanced Mode.  
 Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on store.  
 Find the "Terminal & SSH" add-on and click it.  
