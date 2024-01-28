@@ -13,8 +13,6 @@ Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names 
 
 My SHARENAME is backups and for SUBFOLDER I use the name of the Home Assistant server.  
 
-If you're unsure and using Unraid, this would be "root" and your Unraid server's IP address.  
-
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 
 If this works, continue on to the next section.  
