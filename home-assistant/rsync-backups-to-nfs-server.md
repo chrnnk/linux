@@ -12,7 +12,8 @@ If you're unsure and using Unraid, this would be ```root``` and your Unraid serv
 
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 
-If this works, continue on to the next steps.  
+If this works, continue on to the next section.  
+
 If this doesn't work, troubleshoot until it does. Start by pinging your NFS server from the Home Assistant Terminal.  
 ## Testing rsync with SSH certificates
 The first step to configuring ssh key based authentication is to generate a key-pair on the host from which you will be initiating the connection.  
