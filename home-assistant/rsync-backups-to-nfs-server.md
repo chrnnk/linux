@@ -7,11 +7,11 @@ Follow these steps to get the add-on installed on your system:
 ## Testing rsync with password
 ```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/SHARENAME/SUBFOLDER/```  
 
-In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
+Replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
 
 Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names you created for this backup.  
 
-My SHARENAME is backups and for SUBFOLDER I use the name of the Home Assistant server.  
+My SHARENAME is "backups" and for SUBFOLDER I use the name of the Home Assistant server.  
 
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 
