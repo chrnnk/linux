@@ -17,10 +17,6 @@ Once you have this ready, run the command. Mine looks like this:
 ```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/```  
 
 It should then ask you to verify the server you're connecting to, and then ask for the user's password.  
-
-If this works, continue on to the next section.  
-
-If this doesn't work, troubleshoot until it does. Start by pinging your NFS server from the Home Assistant Terminal.  
 ## Setting up rsync with SSH certificates
 ### Generate SSH key-pair on Home Assistant
 The first step to configuring ssh key based authentication is to generate a key-pair on the host from which you will be initiating the connection. The host in this case is the Home Assistant server.  
@@ -46,12 +42,12 @@ If this worked, type ```exit``` to leave the SSH session and return to Home Assi
 
 ### Create the backup script
 Your terminal should now read ```[core-ssh ~]$ ```. If not, type ```cd ~```.  
+
 Create and begin editing the backup script by typing:  
 
 ```nano ha-backup.sh```   
 
 Replace the second line in the code below with the command you made in the section "Testing rsync with password".  
-Then copy and paste the following into the Home Assistant Terminal. If you're having issues pasting I recommend ClickPaste on GitHub.  
 
 ```
 #!/bin/bash
@@ -64,3 +60,18 @@ Now make the script executable by running:
 
 ```chmod +x ha-backup.sh```
 
+Before we schedule it, let's make sure the script works when run manually:  
+
+```./ha-backup.sh```
+
+Now we can schedule it with crontab:
+
+```EDITOR=nano crontab -e```
+
+Paste the following line at the end to make the script run at 1am daily:  
+
+```0 1 * * * /bin/bash /home/user/ha-backup.sh```
+
+Save it with ```CTRL+S```, then exit nano with ```CTRL+X```.  
+
+Test it by deleting the Home Assistant backups on your NFS server, then check again tomorrow after 1am to be sure the script ran.  
