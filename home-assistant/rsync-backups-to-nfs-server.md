@@ -13,6 +13,9 @@ Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names 
 
 My SHARENAME is "backups" and for SUBFOLDER I use the name of the Home Assistant server.  
 
+Once you have this ready, run the command. Mine looks like this:  
+```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main```  
+
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 
 If this works, continue on to the next section.  
