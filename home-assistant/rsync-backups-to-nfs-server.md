@@ -5,7 +5,8 @@ Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on store.
 Find the "Terminal & SSH" add-on and click it.  
 Click on the "INSTALL" button.
 ## Testing rsync with password
-In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.
+In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
+If you're unsure and using Unraid, this would be ```root``` and your Unraid server's IP address.  
 ```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/backups/xerxes-home-assistant/```  
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 If this works, you should have no problems with the next steps. If this doesn't work, troubleshoot until it does.
