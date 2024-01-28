@@ -11,7 +11,7 @@ Replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NF
 
 Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names you created for this backup.  
 
-My SHARENAME is "backups" and for SUBFOLDER I use the name of the Home Assistant server.  
+My SHARENAME is "backups" and for SUBFOLDER I use the name of the Home Assistant server "home-assistant-main".  
 
 Once you have this ready, run the command. Mine looks like this:  
 ```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main```  
