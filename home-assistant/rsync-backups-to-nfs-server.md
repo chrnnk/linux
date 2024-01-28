@@ -7,9 +7,9 @@ Follow these steps to get the add-on installed on your system:
 ## Testing rsync with password
 In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.  
 
-Also replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names you created for this backup.  
+Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names you created for this backup.  
 
-My ```SHARENAME``` is ```backups```, and for ```SUBFOLDER``` I use the name of the Home Assistant server.  
+My SHARENAME is backups and for SUBFOLDER I use the name of the Home Assistant server.  
 
 If you're unsure and using Unraid, this would be ```root``` and your Unraid server's IP address.  
 
