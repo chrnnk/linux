@@ -21,6 +21,6 @@ From the Home Assistant Terminal, generate a new key-pair with:
 ```ssh-keygen -t ed25519```  
 
 If you're unsure, accept defaults by pressing Enter.  
-Next, copy the public key to the target NFS server. 
+Next, copy the public key to the target NFS server.  
 You can manually copy the public key (id_ed25519.pub) to the target NFS server, however, it’s much easier to use the ```ssh-copy-id``` utility included with the OpenSSH suit:  
 ```ssh-copy-id USER@IPADDRESS```
