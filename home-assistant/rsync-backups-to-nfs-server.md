@@ -50,12 +50,17 @@ Create and begin editing the backup script by typing:
 
 ```nano ha-backup.sh```   
 
-Replace ```root@192.168.1.5:/mnt/user/backups/home-assistant-main/``` in the code below with the command you made in the section "Testing rsync with password".  
-Then copy and paste the following into the Home Assistant Terminal. If you're having issues pasting I reccommend ClickPaste on GitHub.  
+Replace the second line in the code below with the command you made in the section "Testing rsync with password".  
+Then copy and paste the following into the Home Assistant Terminal. If you're having issues pasting I recommend ClickPaste on GitHub.  
 
 ```
 #!/bin/bash
 rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/
 ```
 
-Buns
+Save it with ```CTRL+S```, then exit nano with ```CTRL+X```.  
+
+Now make the script executable by running:  
+
+```chmod +x ha-backup.sh```
+
