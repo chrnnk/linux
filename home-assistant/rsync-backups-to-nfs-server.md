@@ -31,13 +31,17 @@ From the Home Assistant Terminal, generate a new key-pair with:
 
 If you're unsure, accept defaults by pressing Enter.  
 
-### Copy the public key to the target NFS server.  
+### Copy the public key to the target NFS server
 You can manually copy the public key (id_ed25519.pub) to the target NFS server, however, it’s much easier to use the ```ssh-copy-id``` utility included with the OpenSSH suit:  
 
 ```ssh-copy-id USER@IPADDRESS```  
 
 It should then ask for the user's password.  
+
 You can test that this is working with the following command in the Home Assistant Terminal:  
+
 ```ssh USER@IPADDRESS```  
+
 If this worked, type ```exit``` to leave the SSH session and return to Home Assistant Terminal.  
-If this didn't work, continue troubleshooting.  
+
+### Create the backup script
