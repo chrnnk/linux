@@ -45,4 +45,4 @@ You can test that this is working with the following command in the Home Assista
 If this worked, type ```exit``` to leave the SSH session and return to Home Assistant Terminal.  
 
 ### Create the backup script
-Your terminal should now read ```[core-ssh ~]$```. If not, type ```cd ~```.  
+Your terminal should now read ```[core-ssh ~]$ ```. If not, type ```cd ~```.  
