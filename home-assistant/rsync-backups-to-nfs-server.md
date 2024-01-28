@@ -22,14 +22,15 @@ If this works, continue on to the next section.
 
 If this doesn't work, troubleshoot until it does. Start by pinging your NFS server from the Home Assistant Terminal.  
 ## Testing rsync with SSH certificates
-The first step to configuring ssh key based authentication is to generate a key-pair on the host from which you will be initiating the connection.  
-The host in this case is the Home Assistant server.  
-We use the ssh-keygen utility included with the OpenSSH suit included with most flavours of Linux.  
+### Generate SSH key-pair on Home Assistant
+The first step to configuring ssh key based authentication is to generate a key-pair on the host from which you will be initiating the connection. The host in this case is the Home Assistant server.  
+
 From the Home Assistant Terminal, generate a new key-pair with:  
 
 ```ssh-keygen -t ed25519```  
 
 If you're unsure, accept defaults by pressing Enter.  
+
 Next, copy the public key to the target NFS server.  
 You can manually copy the public key (id_ed25519.pub) to the target NFS server, however, it’s much easier to use the ```ssh-copy-id``` utility included with the OpenSSH suit:  
 
