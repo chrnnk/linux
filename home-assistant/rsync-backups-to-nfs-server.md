@@ -11,7 +11,7 @@ Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names 
 
 My SHARENAME is backups and for SUBFOLDER I use the name of the Home Assistant server.  
 
-If you're unsure and using Unraid, this would be ```root``` and your Unraid server's IP address.  
+If you're unsure and using Unraid, this would be "root" and your Unraid server's IP address.  
 
 ```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/SHARENAME/SUBFOLDER/```  
 
