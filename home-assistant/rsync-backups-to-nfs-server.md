@@ -5,8 +5,7 @@ Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on store.
 Find the "Terminal & SSH" add-on and click it.  
 Click on the "INSTALL" button.
 ## Testing rsync with password
-Replace USER with your a user from your NFS server that has write permissions. If you're using Unraid and don't know, use root.  
-Replace IPADDRESS with the IP address for your NFS server that has the backup folder for Home Assistant. If you're using Unraid and don't know, use your Unraid server's IP address.  
+In the below examples, replace ```USER``` with your NFS server's user, and ```IPADDRESS``` with your NFS server's IP address.
 ```rsync -azvh /backup/ USER@IPADDRESS:/mnt/user/backups/xerxes-home-assistant/```  
 It should then ask you to verify the server you're connecting to, and then ask for the Unraid root user's password, in our example.  
 If this works, you should have no problems with the next steps. If this doesn't work, troubleshoot until it does.
@@ -16,5 +15,7 @@ The host in this case is the home-assistant server.
 We use the ssh-keygen utility included with the OpenSSH suit included with most flavours of Linux.  
 From the Home Assistant Terminal, generate a new key-pair with:  
 ```ssh-keygen -t ed25519```  
-If you have any questions, Google them, or accept defaults by pressing Enter.  
-Next, copy the public key to the target NFS server. You can manually copy the public key (id_ed25519.pub) to the target NFS server, however, it’s much easier to use the ```ssh-copy-id``` utility included with the OpenSSH suit:  
+If you're unsure, accept defaults by pressing Enter.  
+Next, copy the public key to the target NFS server. 
+You can manually copy the public key (id_ed25519.pub) to the target NFS server, however, it’s much easier to use the ```ssh-copy-id``` utility included with the OpenSSH suit:  
+```ssh-copy-id USER@IPADDRESS```
