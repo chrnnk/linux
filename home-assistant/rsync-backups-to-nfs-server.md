@@ -14,7 +14,7 @@ Replace ```SHARENAME``` and ```SUBFOLDER``` with your share and subfolder names 
 My SHARENAME is "backups" and for SUBFOLDER I use the name of the Home Assistant server "home-assistant-main".  
 
 Once you have this ready, run the command. Mine looks like this:  
-```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main```  
+```rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/```  
 
 It should then ask you to verify the server you're connecting to, and then ask for the user's password.  
 
@@ -46,3 +46,15 @@ If this worked, type ```exit``` to leave the SSH session and return to Home Assi
 
 ### Create the backup script
 Your terminal should now read ```[core-ssh ~]$ ```. If not, type ```cd ~```.  
+Create and begin editing the backup script by typing:  
+
+```nano ha-backup.sh```   
+
+Replace ```root@192.168.1.5:/mnt/user/backups/home-assistant-main/``` in the code below with the command you made in the section "Testing rsync with password".  
+Then copy and paste the following into the Home Assistant Terminal. If you're having issues pasting I reccommend ClickPaste on GitHub.  
+
+```
+#!/bin/bash
+rsync -azvh /backup/ root@192.168.1.5:/mnt/user/backups/home-assistant-main/ # Replace this with your command from above
+```
+
