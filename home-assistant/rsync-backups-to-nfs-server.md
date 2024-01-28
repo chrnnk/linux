@@ -37,6 +37,7 @@ You can manually copy the public key (id_ed25519.pub) to the target NFS server, 
 ```ssh-copy-id USER@IPADDRESS```  
 
 It should then ask for the user's password.  
-You can test that this is working by typing ```ssh USER@IPADDRESS``` into the Home Assistant Terminal.  
+You can test that this is working with the following command in the Home Assistant Terminal:  
+```ssh USER@IPADDRESS```  
 If this worked, type ```exit``` to leave the SSH session and return to Home Assistant Terminal.  
 If this didn't work, continue troubleshooting.  
