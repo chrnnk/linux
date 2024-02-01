@@ -1,4 +1,5 @@
 # https://github.com/jiangcuo/Proxmox-Port/wiki/Install-Proxmox-VE-on-Debian-bookworm
+# run this as root
 userdel -r nick
 nmcli connection modify 'Wired connection 1' ipv4.address IPADDRESS/24
 nmcli connection modify 'Wired connection 1' ipv4.gateway GATEWAY
