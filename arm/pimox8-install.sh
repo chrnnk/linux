@@ -20,11 +20,11 @@ nano /etc/hosts
 echo 'deb [arch=arm64] https://mirrors.apqa.cn/proxmox/debian/pve bookworm port'>/etc/apt/sources.list.d/pveport.list
 curl https://mirrors.apqa.cn/proxmox/debian/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg 
 # update and install
-apt update && apt full-upgrade
+apt update && apt full-upgrade -y
 apt install ifupdown2 -y
 apt install proxmox-ve postfix open-iscsi -y
 reboot
-apt update && apt full-upgrade
+apt update && apt full-upgrade -y
 pveam update
 # tteck scripts
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
