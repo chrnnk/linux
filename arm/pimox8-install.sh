@@ -21,8 +21,8 @@ echo 'deb [arch=arm64] https://mirrors.apqa.cn/proxmox/debian/pve bookworm port'
 curl https://mirrors.apqa.cn/proxmox/debian/pveport.gpg -o /etc/apt/trusted.gpg.d/pveport.gpg 
 # update and install
 apt update && apt full-upgrade
-apt install ifupdown2
-apt install proxmox-ve postfix open-iscsi
+apt install ifupdown2 -y
+apt install proxmox-ve postfix open-iscsi -y
 reboot
 apt update && apt full-upgrade
 pveam update
