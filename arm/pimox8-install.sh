@@ -26,6 +26,7 @@ apt install proxmox-ve postfix open-iscsi -y
 reboot
 apt update && apt full-upgrade -y
 pveam update
+# create bridge in proxmox gui
 # tteck scripts
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/kernel-clean.sh)"
