@@ -33,3 +33,14 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/kernel-cle
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/scaling-governor.sh)"
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/cron-update-lxcs.sh)"
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/netdata.sh)"
+# run lxc
+# https://github.com/jiangcuo/Proxmox-Port/issues/3
+# Create the debian lxc/ct, select static on the network tab and leave it blank.
+# Start the lxc and login, should be unable to get an IP address
+ip -c a
+# run the following command to get an IP address
+dhclient
+apt update
+# to install ifupdown2 package, Note: if this doesn't work out try "apt install ifupdown"
+apt install ifupdown2 -y
+apt upgrade -y
