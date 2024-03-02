@@ -1,4 +1,5 @@
-sudo swapoff -a
-sudo systemctl stop dphys-swapfile
-sudo dphys-swapfile uninstall
-sudo systemctl mask dphys-swapfile
+swapoff -a
+systemctl stop dphys-swapfile
+dphys-swapfile uninstall
+systemctl mask dphys-swapfile
+reboot
