@@ -2,6 +2,11 @@
 Tteck's Proxmox Helper Scripts
 https://tteck.github.io/Proxmox/
 
+### Verify IOMMU Group Isolation
+```sh
+pvesh get /nodes/{nodename}/hardware/pci --pci-class-blacklist ""
+```
+
 ### VM .conf location
 ```sh
 /etc/pve/qemu-server/VMID.conf
