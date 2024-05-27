@@ -71,7 +71,7 @@ msg_ok "Successfully Removed Kernels"
 
 msg_info "Updating systemd-boot"
 /usr/sbin/proxmox-boot-tool refresh
-msg_ok "Successfully Updated GRUB"
+msg_ok "Successfully Updated GRUB (ran command "proxmox-boot-tool refresh" )"
 msg_info "Exiting"
 sleep 2
 msg_ok "Finished"
