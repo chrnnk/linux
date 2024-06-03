@@ -38,7 +38,7 @@ cd ~/.ssh
 touch authorized_keys
 
 echo -e "${Green}Adding my ssh key to authorized keys${ColorOff}"
-echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrxnn.com" >> ~/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMw4F/gxCmCiWdmqLmtPbZTObzzmlwWLh2SosqKdLzZl nick@chrnnk.tv" >> ~/.ssh/authorized_keys
 
 echo -e "${Green}Updating everything${ColorOff}"
 sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y
