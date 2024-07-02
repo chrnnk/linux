@@ -1,3 +1,5 @@
+# bash -c "$(wget -qLO - https://github.com/chrnnk/linux/raw/main/scripts/docker-install.sh)"
+
 apt-get update
 apt-get install ca-certificates curl
 install -m 0755 -d /etc/apt/keyrings
@@ -8,3 +10,4 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
+apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
